@@ -113,4 +113,8 @@ class VC_MainSence: VC_HasExtraMenu{
         super.viewWillAppear(animated)
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+    }
 }

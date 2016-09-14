@@ -19,6 +19,7 @@
 		F910C1A11D6434B6003367A7 /* CV_GoalSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F910C1A01D6434B6003367A7 /* CV_GoalSelection.swift */; };
 		F929E5691D775A3600BFE8E5 /* VC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F929E5681D775A3600BFE8E5 /* VC_Login.swift */; };
 		F93837131D56DA55007A0D63 /* V_Cooker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93837121D56DA55007A0D63 /* V_Cooker.swift */; };
+		F9449F061D89AB4A009E5646 /* VC_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9449F051D89AB4A009E5646 /* VC_Profile.swift */; };
 		F951AD551D6EB30800725C75 /* VC_BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951AD541D6EB30800725C75 /* VC_BaseVC.swift */; };
 		F951AD591D6EF17B00725C75 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951AD581D6EF17B00725C75 /* User.swift */; };
 		F95A2A6A1D563B0E00D39BF0 /* VC_MainSence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A2A691D563B0E00D39BF0 /* VC_MainSence.swift */; };
@@ -73,6 +74,7 @@
 		F910C1A01D6434B6003367A7 /* CV_GoalSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CV_GoalSelection.swift; path = VC/MainSence/CV_GoalSelection.swift; sourceTree = "<group>"; };
 		F929E5681D775A3600BFE8E5 /* VC_Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VC_Login.swift; path = VC/VC_Login.swift; sourceTree = "<group>"; };
 		F93837121D56DA55007A0D63 /* V_Cooker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = V_Cooker.swift; path = VC/V_Cooker.swift; sourceTree = "<group>"; };
+		F9449F051D89AB4A009E5646 /* VC_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC_Profile.swift; sourceTree = "<group>"; };
 		F951AD541D6EB30800725C75 /* VC_BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VC_BaseVC.swift; path = VC/VC_BaseVC.swift; sourceTree = "<group>"; };
 		F951AD581D6EF17B00725C75 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Controller/User.swift; sourceTree = "<group>"; };
 		F95A2A691D563B0E00D39BF0 /* VC_MainSence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VC_MainSence.swift; path = VC/VC_MainSence.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		F951AD561D6EF0EA00725C75 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				F9449F051D89AB4A009E5646 /* VC_Profile.swift */,
 				F951AD541D6EB30800725C75 /* VC_BaseVC.swift */,
 				F97051C51D6AF99F00740B3A /* VC_Result.swift */,
 				F97051C71D6B4E2200740B3A /* VC_HasExtraMenu.swift */,
@@ -404,6 +407,7 @@
 				F951AD591D6EF17B00725C75 /* User.swift in Sources */,
 				F951AD551D6EB30800725C75 /* VC_BaseVC.swift in Sources */,
 				F95CE4121D695EE80045E6DF /* VC_ExtraOption.swift in Sources */,
+				F9449F061D89AB4A009E5646 /* VC_Profile.swift in Sources */,
 				F929E5691D775A3600BFE8E5 /* VC_Login.swift in Sources */,
 				F95A2A6A1D563B0E00D39BF0 /* VC_MainSence.swift in Sources */,
 				F9FD51101D4DEE57006A3AF3 /* FBSDKHeader.m in Sources */,

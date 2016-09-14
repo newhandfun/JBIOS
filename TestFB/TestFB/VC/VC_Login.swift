@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VC_Login: VC_BaseVC{
+class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
     
     var isLogin : Bool  = false;
     @IBOutlet weak var btn_FBLogin: UIButton!
@@ -16,11 +16,17 @@ class VC_Login: VC_BaseVC{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let vd = FBSDKAccessToken.currentAccessToken()
-        {
-            goToMainSence()
-            btn_FBLogin.setValue("已登入！", forKey: "")
-        }
+        
+//        if let fb = btn_FBLogin as? FBSDKLoginButton{
+////            print("0")
+//            fb.readPermissions = ["email","user_friends","public_profile"]
+//            if FBSDKAccessToken.currentAccessToken() != nil{
+//                goToMainSence()
+//            }
+//        }
+//        getFBUserData()
+//        goToMainSence()
+//      btn_FBLogin.setValue("已登入！", forKey: "")
     }
     
     //登入
@@ -46,7 +52,7 @@ class VC_Login: VC_BaseVC{
                 if(fbloginresult.grantedPermissions.contains("email") )
                 {
                     self.getFBUserData()
-//                    fbLoginManager.logOut()
+                    fbLoginManager.logOut()
                 }else{
                     return
                 }
@@ -63,13 +69,21 @@ class VC_Login: VC_BaseVC{
         }
     }
     
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!)
+    {}
+
+    
     func goToMainSence(){
-        if(isLogin != false){
-        performSegueWithIdentifier("Main", sender: self)
-        }
+//        if(isLogin != false){
+            performSegueWithIdentifier("Main", sender: self)
+//        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+        super.prepareForSegue(segue, sender: sender)
     }
 }

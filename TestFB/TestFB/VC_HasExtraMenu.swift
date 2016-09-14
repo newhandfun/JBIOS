@@ -14,7 +14,7 @@ class VC_HasExtraMenu: VC_BaseVC {
     var extraViewDistance : CGFloat = 90
     
     @IBOutlet weak var consLead_extra: NSLayoutConstraint!
-    var isClose :Bool = false
+    var isClose :Bool = true
     
     //upon Extra view
     @IBOutlet var upExtraView0: UIView!

@@ -16,12 +16,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         var initialViewController: UIViewController
         
         if(FBSDKAccessToken.currentAccessToken() != nil){
+            
+            //user
+            let user :User = User()
+            var parameters = ["fields": "id, name, first_name, last_name, picture.type(large), email"]
+            
+            FBSDKGraphRequest(graphPath: "me", parameters:parameters).startWithCompletionHandler({ (connection, result, error) -> Void in
+                if (error == nil){
+                    user.FBid = parameters["id"]
+                    user.name = parameters["name"]
+                    user.email = parameters["email"]
+                }
+            })
+            
             let vc = mainStoryboard.instantiateViewControllerWithIdentifier("Main") as! VC_MainSence
+            vc.user = user
             initialViewController = vc
         }else{
             initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Login")

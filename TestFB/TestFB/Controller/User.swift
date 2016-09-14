@@ -26,7 +26,7 @@ public class User{
     var password : String = ""
     
     //FB
-    var FBid = ""
+    var FBid : String! = ""
     var isFB : Bool = false
     
     public init(){

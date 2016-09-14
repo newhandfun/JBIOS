@@ -33,4 +33,6 @@ class VC_Result: VC_HasExtraMenu {
         quetion.addAction(callaction);
         self.presentViewController(quetion, animated: true, completion: nil);
     }
+    
+    
 }
