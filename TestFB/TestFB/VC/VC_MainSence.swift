@@ -10,15 +10,21 @@ import UIKit
 
 class VC_MainSence: VC_HasExtraMenu{
     
+    //UserData
+    var userData : User = User()
+    
+    
     //tutorial
     @IBOutlet weak var btn_tutorial: UIButton!
     @IBOutlet weak var view_tutorial: UIView!
     @IBOutlet weak var Cont_tuto: UIView!
+    
    
     @IBAction func clickTutorial(sender: AnyObject){
         view_tutorial.hidden = !view_tutorial.hidden
         view_bigMenu.hidden = true
         Cont_tuto.hidden = false
+        
     }
     
     
@@ -45,8 +51,23 @@ class VC_MainSence: VC_HasExtraMenu{
         SetFindCondition()
     }
     
-    func SetFindCondition(){
     
+    @IBOutlet weak var btn_lid: UIButton!
+    func SetFindCondition(){
+        var angle : CGFloat = -0.5
+        for index in 1...5{
+            angle *= -1
+            LipSwing(NSTimeInterval(index) * NSTimeInterval( 0.3), rotaion: angle)
+        }
+        LipSwing(2, rotaion: 0)
+    }
+    
+    func LipSwing(time:NSTimeInterval,rotaion : CGFloat){
+        
+        UIButton.animateWithDuration(time, delay: 0.3, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.3, options: [], animations:
+            {
+                self.btn_lid.transform = CGAffineTransformMakeRotation(rotaion)
+            }, completion: nil)
     }
     
     
@@ -85,7 +106,7 @@ class VC_MainSence: VC_HasExtraMenu{
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         silder_price.continuous = false
-
+        view_tutorial.layer.zPosition = 2
     }
     
     override func viewWillAppear(animated: Bool) {

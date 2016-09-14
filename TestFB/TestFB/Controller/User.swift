@@ -87,16 +87,37 @@ public class User{
         set{isFB = newValue}
     }
     
-    public func encodeToJson() -> String{
-        var JSData:String = ""
+    public func encodeToJson() -> String?{
         
-//        do {
-//            JSData = try NSJSONSerialization.dataWithJSONObject(self, options: NSJSONReadingOptions()) as String!
-//            
-//        } catch {
-//            print(error)
-//        }
+        let uploadData = self
+        var jsonData : NSData!
         
-        return JSData
+        do {
+            jsonData = try NSJSONSerialization.dataWithJSONObject(uploadData, options: NSJSONWritingOptions())
+            
+        } catch {
+            print(error)
+        }
+        
+        return NSString(data: jsonData,encoding: NSUTF8StringEncoding) as? String
+    }
+    
+    public func decodeJson(json : NSString!){
+        var data : User
+        do {
+            try data = (NSJSONSerialization.JSONObjectWithData(json.dataUsingEncoding(NSUTF8StringEncoding)!, options: .AllowFragments) as? User)!
+                self.userID = data.userID
+                self.email = data.email
+                self.name = data.name
+                self.nickname = data.nickname
+                self.gender = data.gender
+                self.isFB = data.isFB
+                self.FBid = data.FBid
+        } catch {
+            print(error)
+        }
+    }
+    
+    public func test(){
     }
 }

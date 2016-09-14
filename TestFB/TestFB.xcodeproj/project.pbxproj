@@ -14,7 +14,10 @@
 		F90278731D4F360E00C82094 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90278721D4F360E00C82094 /* Bolts.framework */; };
 		F9058E341D50504000862E7F /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9058E331D50504000862E7F /* PostData.swift */; };
 		F9058E361D50593500862E7F /* AboutUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9058E351D50593500862E7F /* AboutUs.storyboard */; };
+		F906A41C1D73DF2000B721F0 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = F906A41B1D73DF2000B721F0 /* data.db */; };
+		F906A41E1D73DFFB00B721F0 /* JBdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906A41D1D73DFFB00B721F0 /* JBdata.swift */; };
 		F910C1A11D6434B6003367A7 /* CV_GoalSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F910C1A01D6434B6003367A7 /* CV_GoalSelection.swift */; };
+		F929E5691D775A3600BFE8E5 /* VC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F929E5681D775A3600BFE8E5 /* VC_Login.swift */; };
 		F93837131D56DA55007A0D63 /* V_Cooker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93837121D56DA55007A0D63 /* V_Cooker.swift */; };
 		F951AD551D6EB30800725C75 /* VC_BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951AD541D6EB30800725C75 /* VC_BaseVC.swift */; };
 		F951AD591D6EF17B00725C75 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951AD581D6EF17B00725C75 /* User.swift */; };
@@ -22,6 +25,8 @@
 		F95CE4121D695EE80045E6DF /* VC_ExtraOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CE4111D695EE80045E6DF /* VC_ExtraOption.swift */; };
 		F97051C61D6AF99F00740B3A /* VC_Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97051C51D6AF99F00740B3A /* VC_Result.swift */; };
 		F97051C81D6B4E2200740B3A /* VC_HasExtraMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97051C71D6B4E2200740B3A /* VC_HasExtraMenu.swift */; };
+		F97A8D3B1D7EF0EF00D9D2B4 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F97A8D3A1D7EF0EF00D9D2B4 /* libsqlite3.0.tbd */; };
+		F97A8D3F1D7EFDDA00D9D2B4 /* VC_tutorialPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97A8D3E1D7EFDDA00D9D2B4 /* VC_tutorialPage.swift */; };
 		F9AE0E6E1D5B5411000C8B91 /* VC_Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AE0E6D1D5B5411000C8B91 /* VC_Comment.swift */; };
 		F9AE0E701D5B6822000C8B91 /* PVC_tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AE0E6F1D5B6822000C8B91 /* PVC_tutorial.swift */; };
 		F9FD50DD1D4DECCE006A3AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FD50DC1D4DECCE006A3AF3 /* AppDelegate.swift */; };
@@ -62,14 +67,20 @@
 		F90278721D4F360E00C82094 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		F9058E331D50504000862E7F /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostData.swift; path = JBlite/PostData.swift; sourceTree = "<group>"; };
 		F9058E351D50593500862E7F /* AboutUs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutUs.storyboard; sourceTree = "<group>"; };
+		F906A3CB1D73D69000B721F0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F906A41B1D73DF2000B721F0 /* data.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = data.db; path = TestFB/data.db; sourceTree = "<group>"; };
+		F906A41D1D73DFFB00B721F0 /* JBdata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBdata.swift; sourceTree = "<group>"; };
 		F910C1A01D6434B6003367A7 /* CV_GoalSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CV_GoalSelection.swift; path = VC/MainSence/CV_GoalSelection.swift; sourceTree = "<group>"; };
+		F929E5681D775A3600BFE8E5 /* VC_Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VC_Login.swift; path = VC/VC_Login.swift; sourceTree = "<group>"; };
 		F93837121D56DA55007A0D63 /* V_Cooker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = V_Cooker.swift; path = VC/V_Cooker.swift; sourceTree = "<group>"; };
-		F951AD541D6EB30800725C75 /* VC_BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VC_BaseVC.swift; path = TestFB/VC/VC_BaseVC.swift; sourceTree = "<group>"; };
+		F951AD541D6EB30800725C75 /* VC_BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VC_BaseVC.swift; path = VC/VC_BaseVC.swift; sourceTree = "<group>"; };
 		F951AD581D6EF17B00725C75 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Controller/User.swift; sourceTree = "<group>"; };
 		F95A2A691D563B0E00D39BF0 /* VC_MainSence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VC_MainSence.swift; path = VC/VC_MainSence.swift; sourceTree = "<group>"; };
 		F95CE4111D695EE80045E6DF /* VC_ExtraOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VC_ExtraOption.swift; path = VC/VC_ExtraOption.swift; sourceTree = "<group>"; wrapsLines = 1; };
-		F97051C51D6AF99F00740B3A /* VC_Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VC_Result.swift; path = TestFB/VC/VC_Result.swift; sourceTree = "<group>"; };
-		F97051C71D6B4E2200740B3A /* VC_HasExtraMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VC_HasExtraMenu.swift; path = TestFB/VC_HasExtraMenu.swift; sourceTree = "<group>"; };
+		F97051C51D6AF99F00740B3A /* VC_Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VC_Result.swift; path = VC/VC_Result.swift; sourceTree = "<group>"; };
+		F97051C71D6B4E2200740B3A /* VC_HasExtraMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC_HasExtraMenu.swift; sourceTree = "<group>"; };
+		F97A8D3A1D7EF0EF00D9D2B4 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		F97A8D3E1D7EFDDA00D9D2B4 /* VC_tutorialPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC_tutorialPage.swift; sourceTree = "<group>"; };
 		F9AE0E6D1D5B5411000C8B91 /* VC_Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC_Comment.swift; sourceTree = "<group>"; };
 		F9AE0E6F1D5B6822000C8B91 /* PVC_tutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PVC_tutorial.swift; path = VC/PVC_tutorial.swift; sourceTree = "<group>"; };
 		F9FD50D91D4DECCE006A3AF3 /* TestFB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97A8D3B1D7EF0EF00D9D2B4 /* libsqlite3.0.tbd in Frameworks */,
 				F90278731D4F360E00C82094 /* Bolts.framework in Frameworks */,
 				F9FD510D1D4DED75006A3AF3 /* FBSDKLoginKit.framework in Frameworks */,
 				F9FD510C1D4DED75006A3AF3 /* FBSDKCoreKit.framework in Frameworks */,
@@ -132,13 +144,39 @@
 			path = DocSets;
 			sourceTree = "<group>";
 		};
+		F906A3CD1D73D6A300B721F0 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				F906A3CB1D73D69000B721F0 /* libsqlite3.tbd */,
+				F90278691D4F2EC700C82094 /* DocSets */,
+				F9FD510A1D4DED75006A3AF3 /* FBSDKCoreKit.framework */,
+				F9FD510B1D4DED75006A3AF3 /* FBSDKLoginKit.framework */,
+				F9FD510F1D4DEE57006A3AF3 /* FBSDKHeader.m */,
+				F9FD510E1D4DEE56006A3AF3 /* TestFB-Bridging-Header.h */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		F906A3D11D73DE0A00B721F0 /* AddOn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AddOn;
+			path = TestFB/AddOn;
+			sourceTree = "<group>";
+		};
 		F951AD561D6EF0EA00725C75 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				F951AD541D6EB30800725C75 /* VC_BaseVC.swift */,
+				F97051C51D6AF99F00740B3A /* VC_Result.swift */,
+				F97051C71D6B4E2200740B3A /* VC_HasExtraMenu.swift */,
 				F9FD50DE1D4DECCE006A3AF3 /* ViewController.swift */,
 				F95CE4111D695EE80045E6DF /* VC_ExtraOption.swift */,
 				F9AE0E6D1D5B5411000C8B91 /* VC_Comment.swift */,
 				F95A2A691D563B0E00D39BF0 /* VC_MainSence.swift */,
+				F929E5681D775A3600BFE8E5 /* VC_Login.swift */,
+				F97A8D3E1D7EFDDA00D9D2B4 /* VC_tutorialPage.swift */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -146,7 +184,9 @@
 		F951AD571D6EF11300725C75 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F9058E331D50504000862E7F /* PostData.swift */,
 				F951AD581D6EF17B00725C75 /* User.swift */,
+				F906A41D1D73DFFB00B721F0 /* JBdata.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -154,13 +194,13 @@
 		F9FD50D01D4DECCE006A3AF3 = {
 			isa = PBXGroup;
 			children = (
-				F951AD541D6EB30800725C75 /* VC_BaseVC.swift */,
-				F97051C51D6AF99F00740B3A /* VC_Result.swift */,
-				F97051C71D6B4E2200740B3A /* VC_HasExtraMenu.swift */,
+				F97A8D3A1D7EF0EF00D9D2B4 /* libsqlite3.0.tbd */,
+				F906A41B1D73DF2000B721F0 /* data.db */,
 				F9FD50DB1D4DECCE006A3AF3 /* TestFB */,
 				F9FD50F01D4DECCE006A3AF3 /* TestFBTests */,
 				F9FD50FB1D4DECCE006A3AF3 /* TestFBUITests */,
 				F9FD50DA1D4DECCE006A3AF3 /* Products */,
+				F906A3D11D73DE0A00B721F0 /* AddOn */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +217,7 @@
 		F9FD50DB1D4DECCE006A3AF3 /* TestFB */ = {
 			isa = PBXGroup;
 			children = (
+				F906A3CD1D73D6A300B721F0 /* Header */,
 				F951AD571D6EF11300725C75 /* Controller */,
 				F951AD561D6EF0EA00725C75 /* VC */,
 				F9FD50DC1D4DECCE006A3AF3 /* AppDelegate.swift */,
@@ -187,13 +228,7 @@
 				F9FD50E31D4DECCE006A3AF3 /* Assets.xcassets */,
 				F9FD50E51D4DECCE006A3AF3 /* LaunchScreen.storyboard */,
 				F9FD50E81D4DECCE006A3AF3 /* Info.plist */,
-				F90278691D4F2EC700C82094 /* DocSets */,
-				F9FD510A1D4DED75006A3AF3 /* FBSDKCoreKit.framework */,
-				F9FD510B1D4DED75006A3AF3 /* FBSDKLoginKit.framework */,
-				F9FD510F1D4DEE57006A3AF3 /* FBSDKHeader.m */,
-				F9FD510E1D4DEE56006A3AF3 /* TestFB-Bridging-Header.h */,
 				F9FD51111D4DF745006A3AF3 /* Podfile */,
-				F9058E331D50504000862E7F /* PostData.swift */,
 				F9058E351D50593500862E7F /* AboutUs.storyboard */,
 			);
 			path = TestFB;
@@ -288,6 +323,7 @@
 				TargetAttributes = {
 					F9FD50D81D4DECCE006A3AF3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2L3RJ5843H;
 					};
 					F9FD50EC1D4DECCE006A3AF3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -331,6 +367,7 @@
 				F9FD51121D4DF745006A3AF3 /* Podfile in Resources */,
 				F9FD50E21D4DECCE006A3AF3 /* Main.storyboard in Resources */,
 				F902786E1D4F2EC700C82094 /* FacebookAudienceNetworkSDK-4_14-for-iOS.docset in Resources */,
+				F906A41C1D73DF2000B721F0 /* data.db in Resources */,
 				F90278711D4F2EC700C82094 /* install_docsets.sh in Resources */,
 				F902786F1D4F2EC700C82094 /* FacebookMessengerShareKitSDK-1_3-for-iOS.docset in Resources */,
 			);
@@ -360,14 +397,17 @@
 				F9FD50DF1D4DECCE006A3AF3 /* ViewController.swift in Sources */,
 				F9AE0E701D5B6822000C8B91 /* PVC_tutorial.swift in Sources */,
 				F910C1A11D6434B6003367A7 /* CV_GoalSelection.swift in Sources */,
+				F906A41E1D73DFFB00B721F0 /* JBdata.swift in Sources */,
 				F9058E341D50504000862E7F /* PostData.swift in Sources */,
 				F9FD50DD1D4DECCE006A3AF3 /* AppDelegate.swift in Sources */,
 				F93837131D56DA55007A0D63 /* V_Cooker.swift in Sources */,
 				F951AD591D6EF17B00725C75 /* User.swift in Sources */,
 				F951AD551D6EB30800725C75 /* VC_BaseVC.swift in Sources */,
 				F95CE4121D695EE80045E6DF /* VC_ExtraOption.swift in Sources */,
+				F929E5691D775A3600BFE8E5 /* VC_Login.swift in Sources */,
 				F95A2A6A1D563B0E00D39BF0 /* VC_MainSence.swift in Sources */,
 				F9FD51101D4DEE57006A3AF3 /* FBSDKHeader.m in Sources */,
+				F97A8D3F1D7EFDDA00D9D2B4 /* VC_tutorialPage.swift in Sources */,
 				F97051C81D6B4E2200740B3A /* VC_HasExtraMenu.swift in Sources */,
 				F9AE0E6E1D5B5411000C8B91 /* VC_Comment.swift in Sources */,
 				F97051C61D6AF99F00740B3A /* VC_Result.swift in Sources */,
@@ -515,6 +555,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestFB",
@@ -522,8 +564,9 @@
 				);
 				INFOPLIST_FILE = TestFB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TestFB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivan.jblite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestFB/TestFB-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -534,6 +577,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestFB",
@@ -541,8 +586,9 @@
 				);
 				INFOPLIST_FILE = TestFB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TestFB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivan.jblite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestFB/TestFB-Bridging-Header.h";
 			};
 			name = Release;

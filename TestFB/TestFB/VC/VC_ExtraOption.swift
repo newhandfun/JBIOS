@@ -19,17 +19,12 @@ class VC_ExtraOption: VC_BaseVC {
     //get parent VC
     var parent : VC_HasExtraMenu = VC_HasExtraMenu()
     
-    //bool
-    var ifEVClose : Bool = false
-    
     internal var extraViewDistance : CGFloat{
         get{
-            return view_base.bounds.width - btn_bell.bounds.width
+//            return view_base.bounds.width - btn_bell.bounds.width
+            return view_sign.bounds.width + 20
         }
     }
-    
-    //use to create swing animate
-//    var times : NSTimer = NSTimer()
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -37,33 +32,44 @@ class VC_ExtraOption: VC_BaseVC {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        initialSelf()
+    }
+    
+    func initialSelf() {
         if let _main = self.parentViewController{
             parent = _main as! VC_HasExtraMenu
             parent.extraViewDistance = self.extraViewDistance
-            parent.closeExtraView(0)
         }
         
         setAnchor(CGPointMake(0.5,0), btn: btn_bell)
         setAnchor(CGPointMake(0.5,0), view: view_sign)
+        
+        if parent.isClose {
+            parent.closeExtraView(0)
+        }
     }
     
     
     @IBAction func clickBellButton(sender: AnyObject) {
-        if !ifEVClose {parent.openExtraView(0.5)}
-        else{parent.closeExtraView(0.5)}
-        
-        bellSwing(0.5,rotaion: 0.5)
-        signSwing(0.5,rotaion: 0.5)
-        bellSwing(1,rotaion: 0)
-        signSwing(1,rotaion: 0)
-
-        
-        ifEVClose = !ifEVClose
+        if !parent.isClose {
+            parent.closeExtraView(0.5)
+            bellSwing(0.5,rotaion: 1)
+            signSwing(0.5,rotaion: 0.5)
+            bellSwing(1.2,rotaion: 0)
+            signSwing(1,rotaion: 0)
+        }
+        else{
+            parent.openExtraView(0.5)
+            bellSwing(0.2,rotaion: -1)
+            signSwing(0.2,rotaion: -0.5)
+            bellSwing(0.4,rotaion: 0)
+            signSwing(0.4,rotaion: 0)
+        }
     }
     
     func bellSwing(time:NSTimeInterval,rotaion : CGFloat){
         
-        UIButton.animateWithDuration(time, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.3, options: [], animations:
+        UIButton.animateWithDuration(time, delay: 0.3, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.3, options: [], animations:
             {
                 self.btn_bell.transform = CGAffineTransformMakeRotation(rotaion)
             }, completion: nil)

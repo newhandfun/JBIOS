@@ -9,14 +9,60 @@
 import UIKit
 
 class VC_HasExtraMenu: VC_BaseVC {
+    
     @IBOutlet var cter_extra: UIView!
     var extraViewDistance : CGFloat = 90
     
+    @IBOutlet weak var consLead_extra: NSLayoutConstraint!
+    var isClose :Bool = false
+    
+    //upon Extra view
+    @IBOutlet var upExtraView0: UIView!
+    @IBOutlet var upExtraView1: UIView!
+    @IBOutlet var upExtraView2: UIView!
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+//        consLead_extra.constant -= extraViewDistance
+//        cter_extra.layoutIfNeeded()
+////        print(consLead_extra.constant)
+    }
+    
     func closeExtraView(times : NSTimeInterval){
         UIView.animateWithDuration(times, animations: {self.cter_extra.transform = CGAffineTransformMakeTranslation(self.cter_extra.transform.tx - self.extraViewDistance, self.cter_extra.transform.ty)})
+        isClose = true
+        
+        let z:CGFloat = 2
+        if upExtraView0 != nil{
+            upExtraView0.layer.zPosition = z
+        }
+        if upExtraView1 != nil{
+             upExtraView1.layer.zPosition = z
+        }
+        if upExtraView2 != nil{
+             upExtraView0.layer.zPosition = z
+        }
     }
     
     func openExtraView(times : NSTimeInterval)  {
         UIView.animateWithDuration(times, animations: {self.cter_extra.transform = CGAffineTransformMakeTranslation(self.cter_extra.transform.tx + self.extraViewDistance,self.cter_extra.transform.ty)})
+        isClose = false
+        
+        let z:CGFloat = 0
+        if upExtraView0 != nil{
+            upExtraView0.layer.zPosition = z
+        }
+        if upExtraView1 != nil{
+            upExtraView1.layer.zPosition = z
+        }
+        if upExtraView2 != nil{
+            upExtraView0.layer.zPosition = z
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? VC_HasExtraMenu{
+            vc.isClose = self.isClose;
+        }
     }
 }

@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        var initialViewController: UIViewController
+        
+        if(FBSDKAccessToken.currentAccessToken() != nil){
+            let vc = mainStoryboard.instantiateViewControllerWithIdentifier("Main") as! VC_MainSence
+            initialViewController = vc
+        }else{
+            initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Login")
+        }
+        
+        self.window?.rootViewController = initialViewController
+        
+        self.window?.makeKeyAndVisible()
+        
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         return true
