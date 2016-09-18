@@ -16,29 +16,61 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        let value = FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         var initialViewController: UIViewController
+        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+                    self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         if(FBSDKAccessToken.currentAccessToken() != nil){
             
-            //user
-            let user :User = User()
-            var parameters = ["fields": "id, name, first_name, last_name, picture.type(large), email"]
             
-            FBSDKGraphRequest(graphPath: "me", parameters:parameters).startWithCompletionHandler({ (connection, result, error) -> Void in
-                if (error == nil){
-                    user.FBid = parameters["id"]
-                    user.name = parameters["name"]
-                    user.email = parameters["email"]
-                }
-            })
+            //user
+            let parameters = ["fields": "id, name, first_name, last_name, picture.type(normal),gender, email"]
             
             let vc = mainStoryboard.instantiateViewControllerWithIdentifier("Main") as! VC_MainSence
-            vc.user = user
+            
+            FBSDKGraphRequest(graphPath: "me", parameters:parameters).startWithCompletionHandler({ (connection, result, error) -> Void in
+                if (error != nil){
+                    print(error)
+                    return
+                }
+                StaticUserData.FBid = Int((result["FBid"] as? String)!)!
+                StaticUserData.name = result["name"] as? String
+                StaticUserData.email = result["email"] as? String
+                StaticUserData.gender = result["gender"]as? String
+                StaticUserData.nickname = StaticUserData.name
+                StaticUserData.isFB = true
+                
+                //picture
+                var pictureUrl = ""
+                
+                if let picture = result["picture"] as? NSDictionary,data = picture["data"] as? NSDictionary, url = data["url"] as? String {
+                    pictureUrl = url
+                }
+                
+//                if let picture = result["picture"] as? NSDictionary, data = picture["data"] as? NSDictionary, url = data["url"] as? String {
+//                    pictureUrl = url
+//                }
+                
+                let url = NSURL(string: pictureUrl)
+                NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler:
+                    { (data, response, error) -> Void in
+                    if error != nil {
+                        print(error)
+                        return
+                    }else{
+                    
+                    let image = UIImage(data: data!)
+//                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                        StaticUserData.photo = image!
+//                    })
+                    StaticUserData.photo = image!
+                    }
+                }).resume()
+            })
             initialViewController = vc
+            
         }else{
             initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Login")
         }
@@ -49,13 +81,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        return true
+        return value
     }
     
     func application(application :UIApplication,openURL url:NSURL,sourceApplication : String?,annotation : AnyObject)->Bool{
         
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation:annotation)
     }
+    
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

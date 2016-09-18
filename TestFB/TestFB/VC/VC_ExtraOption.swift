@@ -15,6 +15,7 @@ class VC_ExtraOption: VC_BaseVC {
     @IBOutlet var view_base: UIView!
     @IBOutlet weak var btn_bell: UIButton!
     @IBOutlet weak var view_sign: UIView!
+    @IBOutlet weak var btn_photo: UIButton!
     
     //get parent VC
     var parent : VC_HasExtraMenu = VC_HasExtraMenu()
@@ -26,6 +27,16 @@ class VC_ExtraOption: VC_BaseVC {
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if FBSDKAccessToken.currentAccessToken() != nil{
+            btn_photo.setImage(
+                StaticUserData.photo,
+                forState: UIControlState.Normal)
+            
+        }
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -33,6 +44,8 @@ class VC_ExtraOption: VC_BaseVC {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         initialSelf()
+        btn_photo.layer.cornerRadius = 0.5*btn_photo.bounds.size.width
+        btn_photo.clipsToBounds = true
     }
     
     func initialSelf() {
@@ -47,6 +60,7 @@ class VC_ExtraOption: VC_BaseVC {
         if parent.isClose {
             parent.closeExtraView(0)
         }
+        
     }
     
     
@@ -60,10 +74,10 @@ class VC_ExtraOption: VC_BaseVC {
         }
         else{
             parent.openExtraView(0.5)
-            bellSwing(0.2,rotaion: -1)
-            signSwing(0.2,rotaion: -0.5)
-            bellSwing(0.4,rotaion: 0)
-            signSwing(0.4,rotaion: 0)
+            bellSwing(0.5,rotaion: -1)
+            signSwing(0.5,rotaion: -0.5)
+            bellSwing(1.2,rotaion: 0)
+            signSwing(1,rotaion: 0)
         }
     }
     

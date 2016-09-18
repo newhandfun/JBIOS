@@ -93,8 +93,13 @@ class VC_MainSence: VC_HasExtraMenu{
         lbl_price.text = String(currentPrice)
     }
     
-    //override method
+    //picture
     
+    func ChangePicture(){
+        
+    }
+    
+    //override method
     override func loadView() {
         super.loadView()
     }

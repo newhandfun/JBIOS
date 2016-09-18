@@ -12,21 +12,13 @@ class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
     
     var isLogin : Bool  = false;
     @IBOutlet weak var btn_FBLogin: UIButton!
+      
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-//        if let fb = btn_FBLogin as? FBSDKLoginButton{
-////            print("0")
-//            fb.readPermissions = ["email","user_friends","public_profile"]
-//            if FBSDKAccessToken.currentAccessToken() != nil{
-//                goToMainSence()
-//            }
-//        }
-//        getFBUserData()
-//        goToMainSence()
-//      btn_FBLogin.setValue("已登入！", forKey: "")
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if FBSDKAccessToken.currentAccessToken() != nil{
+            goToMainSence()
+        }
     }
     
     //登入
@@ -51,19 +43,48 @@ class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
                 let fbloginresult : FBSDKLoginManagerLoginResult = result
                 if(fbloginresult.grantedPermissions.contains("email") )
                 {
+                    FBSDKProfile.enableUpdatesOnAccessTokenChange(true)
                     self.getFBUserData()
+                    //測試用
                     fbLoginManager.logOut()
                 }else{
+                    print("fail")
                     return
                 }
             }
         })
     }
     func getFBUserData(){
+        
         if((FBSDKAccessToken.currentAccessToken()) != nil){
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(normal),gender, email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
-                    print(result)
+                    StaticUserData.name = result["name"] as? String
+                    StaticUserData.email = result["email"] as? String
+                    let FBid = result["id"] as? String
+                    StaticUserData.FBid = Int(FBid!)!
+                    StaticUserData.gender = result["gender"]as? String
+                    StaticUserData.nickname = StaticUserData.name
+                    StaticUserData.isFB = true
+                    var pictureUrl = ""
+                    
+                    if let picture = result["picture"] as? NSDictionary,data = picture["data"] as? NSDictionary, url = data["url"] as? String {
+                        pictureUrl = url
+                    }
+                    let url = NSURL(string: pictureUrl)
+                    NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler:
+                        { (data, response, error) -> Void in
+                            if error != nil {
+                                print(error)
+                                return
+                            }else{
+                                let image = UIImage(data: data!)
+                                StaticUserData.photo = image!
+                            }
+                    }).resume()
+                    let postData = PostData()
+                    print(postData.LoginByFB())
+
                 }
             })
         }
@@ -78,9 +99,7 @@ class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
 
     
     func goToMainSence(){
-//        if(isLogin != false){
-            performSegueWithIdentifier("Main", sender: self)
-//        }
+        performSegueWithIdentifier("Main", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
