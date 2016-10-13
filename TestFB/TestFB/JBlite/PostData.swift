@@ -10,31 +10,27 @@ import Foundation
 
 public class PostData  {
     
-//    let seccessString : String =  {"success":"False"}
-    
     var param : String = ""
     var failString : NSString = "{\"success\":\"False\"}"
     var responseString : NSString = NSString()
     
-    public func LoginByFB()->NSString{
-        print(failString)
-        failString = doInBackground(getFalse())
-//        responseString = doInBackground(haveFBaccount())
-        if responseString == failString{
-//            responseString = doInBackground(loadUser())
-//            return responseString
-//            print("!")
-        }
-//        responseString = doInBackground(addFBUser())
-        return responseString
+    
+    public func LoginFBInBackground(function : ()){
+        self.responseString = doInBackGround(haveFBaccount(), funcAfterAll: {
+            if self.responseString == self.failString{
+                print("沒帳號")
+                self.responseString = self.doInBackGround(self.addFBUser(), funcAfterAll: self.LoginFBInBackground(function), finishStr: "註冊")
+            }else{
+                print("有帳號")
+                self.responseString = self.doInBackGround(self.loadUser(), funcAfterAll: function, finishStr: "登入成功")
+            }
+            
+            }(), finishStr: "")
     }
     
-    public func doInBackground( request : NSMutableURLRequest) -> NSString{
-        var responseString : NSString = ""
-        let postString = param
-        print(postString)
-        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+    func doInBackGround(request:NSMutableURLRequest,funcAfterAll:(),finishStr:String)->NSString{
+        var result : NSString = NSString()
+        NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
             guard error == nil && data != nil else {                                                          // check for fundamental networking error
                 print("error=\(error)")
                 return
@@ -45,20 +41,24 @@ public class PostData  {
                 print("response = \(response)")
             }
             
-            responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)!
-            print("responseString = \(responseString)")
+            result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
             
-            StaticUserData.decodeJson(responseString)
-        }
-        task.resume()
-        return responseString
-    }
-    
-    func getFalse()->NSMutableURLRequest{
-        let request = NSMutableURLRequest(URL: NSURL(string: "http://140.122.184.227/~ivan/JB/login/addFBUser.php")!)
-        request.HTTPMethod = "POST"
-        param = ""
-        return request
+            //try to decode
+            
+            if(StaticUserData.userID == nil){
+                StaticUserData.decodeJsonToUserData(result)
+            }
+            
+            if(finishStr == "下載店家資訊"){
+                
+            }
+            print("res = \(result)")
+            //  running closure
+            print(finishStr)
+            funcAfterAll
+            }
+            .resume()
+        return result
     }
     
     func addFBUser()->NSMutableURLRequest{
@@ -71,6 +71,7 @@ public class PostData  {
         addParam("nickname", value: StaticUserData.name)
         addParam("email", value: StaticUserData.email)
         addParam("FBid", value: StaticUserData.FBid)
+                request.HTTPBody = self.param.dataUsingEncoding(NSUTF8StringEncoding)
         return request
     }
     
@@ -80,6 +81,7 @@ public class PostData  {
         param = ""
         addParam("hash", value: "This is Ivan Speaking.")
         addParam("email", value: StaticUserData.email)
+                request.HTTPBody = self.param.dataUsingEncoding(NSUTF8StringEncoding)
         return request
     }
     
@@ -90,12 +92,12 @@ public class PostData  {
         addParam("hash", value: "This is Ivan Speaking.")
         addParam("email", value: StaticUserData.email)
         addParam("FBid", value: StaticUserData.FBid)
+                request.HTTPBody = self.param.dataUsingEncoding(NSUTF8StringEncoding)
         return request
     }
     
+    
     func addParam(key:String,value:String){
-//        var str : String! = ""
-//        str = String(value.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true))
         let str = String(UTF8String: value.cStringUsingEncoding(NSUTF8StringEncoding)!)
         if param != ""{
             param += "&"
@@ -111,7 +113,6 @@ public class PostData  {
             param += "&"
         }
         param += (key + "=" + str)
-
     }
     
 }

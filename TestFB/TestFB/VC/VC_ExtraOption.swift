@@ -16,6 +16,7 @@ class VC_ExtraOption: VC_BaseVC {
     @IBOutlet weak var btn_bell: UIButton!
     @IBOutlet weak var view_sign: UIView!
     @IBOutlet weak var btn_photo: UIButton!
+    @IBOutlet weak var text_hello: UILabel!
     
     //get parent VC
     var parent : VC_HasExtraMenu = VC_HasExtraMenu()
@@ -29,23 +30,23 @@ class VC_ExtraOption: VC_BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if FBSDKAccessToken.currentAccessToken() != nil{
+        if (FBSDKAccessToken.currentAccessToken() != nil){
             btn_photo.setImage(
                 StaticUserData.photo,
                 forState: UIControlState.Normal)
-            
+            text_hello.text = "你好,"+StaticUserData.name
         }
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        btn_photo.clipsToBounds = true
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        initialSelf()
         btn_photo.layer.cornerRadius = 0.5*btn_photo.bounds.size.width
-        btn_photo.clipsToBounds = true
+        initialSelf()
     }
     
     func initialSelf() {

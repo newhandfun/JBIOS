@@ -10,33 +10,37 @@ import UIKit
 
 class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
     
-    var isLogin : Bool  = false;
+    var isLogin : Bool  = false
     @IBOutlet weak var btn_FBLogin: UIButton!
-      
+    var loginTimer = NSTimer()
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         if FBSDKAccessToken.currentAccessToken() != nil{
-            goToMainSence()
+            getFBUserData()
+            loginTimer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: Selector("goToMainSence"),userInfo: nil, repeats: true)
         }
     }
     
     //登入
+    //UI
     @IBOutlet weak var text_emil: UITextField!
     @IBOutlet weak var text_password: UITextField!
     
-    func checkInput()->Bool{
-        return true
-    }
-    
+    //事件
     @IBAction func click_Login(sender: AnyObject) {
-        if checkInput(){
-            goToMainSence()
-        }
+
     }
-    
     @IBAction func clickFBLogin(sender: AnyObject) {
-        
+        FBLogin()
+    }
+    //FBLogin
+    func FBLogin(){
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager .logInWithReadPermissions(["email","user_friends","public_profile"],fromViewController: self,  handler:  { (result, error) -> Void in
             if (error == nil){
@@ -45,8 +49,6 @@ class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
                 {
                     FBSDKProfile.enableUpdatesOnAccessTokenChange(true)
                     self.getFBUserData()
-                    //測試用
-                    fbLoginManager.logOut()
                 }else{
                     print("fail")
                     return
@@ -55,36 +57,11 @@ class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
         })
     }
     func getFBUserData(){
-        
         if((FBSDKAccessToken.currentAccessToken()) != nil){
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(normal),gender, email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
+            FBSDKGraphRequest(graphPath: "me", parameters: StaticUserData.parameters).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
-                    StaticUserData.name = result["name"] as? String
-                    StaticUserData.email = result["email"] as? String
-                    let FBid = result["id"] as? String
-                    StaticUserData.FBid = Int(FBid!)!
-                    StaticUserData.gender = result["gender"]as? String
-                    StaticUserData.nickname = StaticUserData.name
-                    StaticUserData.isFB = true
-                    var pictureUrl = ""
-                    
-                    if let picture = result["picture"] as? NSDictionary,data = picture["data"] as? NSDictionary, url = data["url"] as? String {
-                        pictureUrl = url
-                    }
-                    let url = NSURL(string: pictureUrl)
-                    NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler:
-                        { (data, response, error) -> Void in
-                            if error != nil {
-                                print(error)
-                                return
-                            }else{
-                                let image = UIImage(data: data!)
-                                StaticUserData.photo = image!
-                            }
-                    }).resume()
-                    let postData = PostData()
-                    print(postData.LoginByFB())
-
+                    StaticUserData.convertFBResultToProperty(result,function : self.goToMainSence())
+                    print("login")
                 }
             })
         }
@@ -99,7 +76,12 @@ class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
 
     
     func goToMainSence(){
-        performSegueWithIdentifier("Main", sender: self)
+        if(StaticUserData.userID != nil){
+            performSegueWithIdentifier("Main", sender: self)
+            loginTimer.invalidate()
+        }else{
+//            print(StaticUserData.userID)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

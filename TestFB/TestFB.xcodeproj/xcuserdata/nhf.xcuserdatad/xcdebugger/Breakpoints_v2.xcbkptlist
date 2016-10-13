@@ -4,104 +4,11 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../../Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/include/dispatch/once.h"
-            timestampString = "491730496.715161"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "_dispatch_once(dispatch_once_t *predicate, dispatch_block_t block)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_MainSence.swift"
-            timestampString = "492230407.521406"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "9"
-            endingLineNumber = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_ExtraOption.swift"
-            timestampString = "493790705.10259"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "VC_ExtraOption"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.VC_ExtraOption.view_base.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIView&gt;"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/TestFB/TestFB/VC/VC_ExtraOption.swift"
-                  timestampString = "493522931.115441"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "65">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.VC_ExtraOption.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; TestFB.VC_ExtraOption"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/TestFB/TestFB/VC/VC_ExtraOption.swift"
-                  timestampString = "493522931.115554"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "69">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.VC_ExtraOption.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TestFB.VC_ExtraOption&gt;"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/TestFB/TestFB/VC/VC_ExtraOption.swift"
-                  timestampString = "493522931.115658"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -120,203 +27,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_ExtraOption.swift"
-            timestampString = "495778361.175869"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "clickBellButton(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_Comment.swift"
-            timestampString = "493575878.182315"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "VC_Comment"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC_Comment.swift"
-            timestampString = "493577116.113943"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "VC_Comment"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC_Comment.swift"
-            timestampString = "493577086.31658"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "VC_Comment"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_ExtraOption.swift"
-            timestampString = "495778361.175869"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "setAnchor(_:btn:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_ExtraOption.swift"
-            timestampString = "495778361.175869"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "bellSwing(_:rotaion:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_ExtraOption.swift"
-            timestampString = "495778361.175869"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "signSwing(_:rotaion:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_ExtraOption.swift"
-            timestampString = "495778361.175869"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "bellSwing(_:rotaion:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_Result.swift"
-            timestampString = "493806513.262557"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "clickTimes(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/Controller/User.swift"
-            timestampString = "493810200.548707"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/JBdata.swift"
-            timestampString = "494861223.153339"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "JBData"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_MainSence.swift"
-            timestampString = "494339535.667686"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "clickTutorial(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "TestFB/JBlite/PostData.swift"
-            timestampString = "495895965.258615"
+            timestampString = "496494672.725407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
             endingLineNumber = "46"
-            landmarkName = "doInBackground(_:)"
+            landmarkName = "doInBackGround(_:funcAfterAll:finishStr:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -327,12 +44,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestFB/JBlite/PostData.swift"
-            timestampString = "495895965.258615"
+            timestampString = "496495206.936261"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "addParam(_:value:)"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "doInBackGround(_:funcAfterAll:finishStr:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestFB.PostData.doInBackGround (__ObjC.NSMutableURLRequest, funcAfterAll : (), finishStr : Swift.String) -&gt; __ObjC.NSString"
+                  moduleName = "TestFB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/JBlite/PostData.swift"
+                  timestampString = "496477149.301967"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "427">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestFB.PostData.(doInBackGround (__ObjC.NSMutableURLRequest, funcAfterAll : (), finishStr : Swift.String) -&gt; __ObjC.NSString).(closure #1)"
+                  moduleName = "TestFB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/JBlite/PostData.swift"
+                  timestampString = "496477149.30209"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "2057">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestFB/VC/VC_Login.swift"
+            timestampString = "496478941.885149"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "goToMainSence()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -342,13 +107,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestFB/JBlite/PostData.swift"
-            timestampString = "495895965.258615"
+            filePath = "TestFB/VC/VC_Login.swift"
+            timestampString = "496478941.885149"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "addParam(_:value:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -358,262 +123,91 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestFB/VC_tutorialPage.swift"
-            timestampString = "494862542.518665"
+            filePath = "TestFB/Store.swift"
+            timestampString = "498062596.398"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "buildReqest(_:price:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestFB/Store.swift"
+            timestampString = "498062596.398"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "buildReqest(_:price:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestFB/Store.swift"
+            timestampString = "498062596.398"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "buildReqest(_:price:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestFB/Store.swift"
+            timestampString = "496679695.651404"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
             endingLineNumber = "16"
-            landmarkName = "clickPass(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC_HasExtraMenu.swift"
-            timestampString = "495121362.606867"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "VC_HasExtraMenu"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_MainSence.swift"
-            timestampString = "494866580.480796"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "SetFindCondition()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC_HasExtraMenu.swift"
-            timestampString = "495123195.664768"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "VC_HasExtraMenu"
+            landmarkName = "Store"
             landmarkType = "3">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "TestFB.VC_HasExtraMenu.upExtraView0.getter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIView&gt;"
+                  symbolName = "TestFB.Store.tel.getter : Swift.Optional&lt;Swift.String&gt;"
                   moduleName = "TestFB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/VC_HasExtraMenu.swift"
-                  timestampString = "495123195.667456"
+                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/Store.swift"
+                  timestampString = "496680320.656827"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "35">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.VC_HasExtraMenu.upExtraView0.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIView&gt;"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/VC_HasExtraMenu.swift"
-                  timestampString = "495123195.667573"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "65">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.VC_HasExtraMenu.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; TestFB.VC_HasExtraMenu"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/VC_HasExtraMenu.swift"
-                  timestampString = "495123195.667663"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "235">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.VC_HasExtraMenu.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TestFB.VC_HasExtraMenu&gt;"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/VC_HasExtraMenu.swift"
-                  timestampString = "495123195.667746"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "146">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_BaseVC.swift"
-            timestampString = "495798546.471378"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "VC_BaseVC"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.VC_BaseVC.user.getter : TestFB.User"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/VC/VC_BaseVC.swift"
-                  timestampString = "495557457.744528"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "35">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.VC_BaseVC.user.setter : TestFB.User"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/VC/VC_BaseVC.swift"
-                  timestampString = "495557457.744646"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "63">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.VC_BaseVC.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; TestFB.VC_BaseVC"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/VC/VC_BaseVC.swift"
-                  timestampString = "495557457.74474"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "57">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.VC_BaseVC.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TestFB.VC_BaseVC&gt;"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/VC/VC_BaseVC.swift"
-                  timestampString = "495557457.744849"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/Controller/User.swift"
-            timestampString = "495558179.320825"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "User"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.User.init () -&gt; TestFB.User"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/Controller/User.swift"
-                  timestampString = "495558193.93591"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "337">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.User.FBid.getter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/Controller/User.swift"
-                  timestampString = "495558193.93601"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
                   offsetFromSymbolStart = "82">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "TestFB.User.FBid.setter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;"
+                  symbolName = "TestFB.Store.tel.setter : Swift.Optional&lt;Swift.String&gt;"
                   moduleName = "TestFB"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/Controller/User.swift"
-                  timestampString = "495558193.936094"
+                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/Store.swift"
+                  timestampString = "496680320.657049"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
                   offsetFromSymbolStart = "179">
                </Location>
             </Locations>
@@ -625,13 +219,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestFB/VC_Profile.swift"
-            timestampString = "495778125.416722"
+            filePath = "TestFB/VC/VC_Result.swift"
+            timestampString = "497777043.259611"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "clickTimes(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -641,13 +235,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_BaseVC.swift"
-            timestampString = "495798546.471378"
+            filePath = "TestFB/UserStruct.swift"
+            timestampString = "496739105.208829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "prepareForSegue(_:sender:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "convertFBResultToProperty(_:function:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestFB/UserStruct.swift"
+            timestampString = "496739114.632947"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "convertFBResultToProperty(_:function:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -658,12 +268,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestFB/VC/VC_MainSence.swift"
-            timestampString = "495634197.932974"
+            timestampString = "497777436.393714"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "viewDidAppear(_:)"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "click_lid(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -673,221 +283,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestFB/AppDelegate.swift"
-            timestampString = "495891849.041662"
+            filePath = "TestFB/UserStruct.swift"
+            timestampString = "498062596.398"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.AppDelegate.application (__ObjC.UIApplication, didFinishLaunchingWithOptions : Swift.Optional&lt;Swift.Dictionary&lt;__ObjC.NSObject, Swift.AnyObject&gt;&gt;) -&gt; Swift.Bool"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/AppDelegate.swift"
-                  timestampString = "495633281.178063"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "2170">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.AppDelegate.(application (__ObjC.UIApplication, didFinishLaunchingWithOptions : Swift.Optional&lt;Swift.Dictionary&lt;__ObjC.NSObject, Swift.AnyObject&gt;&gt;) -&gt; Swift.Bool).(closure #1)"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/AppDelegate.swift"
-                  timestampString = "495633281.178194"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "3035">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/AppDelegate.swift"
-            timestampString = "495785473.764993"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_Login.swift"
-            timestampString = "495892582.388913"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "getFBUserData()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.VC_Login.(getFBUserData () -&gt; ()).(closure #1)"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/VC/VC_Login.swift"
-                  timestampString = "495786225.665153"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "4870">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TestFB.VC_Login.(getFBUserData () -&gt; ()).(closure #1)"
-                  moduleName = "TestFB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nhf/Desktop/JBIOS/TestFB/TestFB/VC/VC_Login.swift"
-                  timestampString = "495786225.665297"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "5494">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_Login.swift"
-            timestampString = "495892582.388913"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "getFBUserData()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/AppDelegate.swift"
-            timestampString = "495786469.162311"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC_Profile.swift"
-            timestampString = "495798698.895093"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_Login.swift"
-            timestampString = "495892582.388913"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "getFBUserData()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/JBlite/PostData.swift"
-            timestampString = "495895965.258615"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "addParam(_:value:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/JBlite/PostData.swift"
-            timestampString = "495895965.258615"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "addParam(_:value:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_Login.swift"
-            timestampString = "495892633.111016"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "getFBUserData()"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "decodeJsonArray(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

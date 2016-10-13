@@ -34,6 +34,7 @@ class VC_MainSence: VC_HasExtraMenu{
     @IBOutlet weak var view_bigMenu: UIView!
     @IBOutlet weak var silder_price: UISlider!
     @IBOutlet weak var lbl_price: UILabel!
+    @IBOutlet weak var seg_goal: UISegmentedControl!
     var currentPrice : Int = 100
     
     @IBAction func clickMenuButton(sender: AnyObject) {
@@ -93,11 +94,41 @@ class VC_MainSence: VC_HasExtraMenu{
         lbl_price.text = String(currentPrice)
     }
     
-    //picture
-    
-    func ChangePicture(){
-        
+    //store data
+    @IBAction func click_lid(sender: AnyObject) {
+        var result : NSString = NSString()
+        NSURLSession.sharedSession().dataTaskWithRequest( Store.buildReqest(seg_goal.selectedSegmentIndex + 1, price: Int(silder_price.value/50))) { data, response, error in
+            guard error == nil && data != nil else {                                                          // check for fundamental networking error
+                print("error=\(error)")
+                return
+            }
+            
+            if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {           // check for http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(response)")
+            }
+            
+            result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
+            
+            print("res = \(result)")
+            
+            //try to decode
+            
+            let json = StaticUserData.decodeJson(result)
+            Store.name = json["name"]!
+            Store.id = Int(json["id"]! as String)!
+            Store.address = json["address"]!
+            Store.time = json["b_Hour"]!
+            Store.tel = json["tel"]!
+            self.performSegueWithIdentifier("Result", sender: self)
+            let str = "http://140.122.184.227/~ivan/JB/pic/\(Store.name)/店面_\(Store.name)_1.jpg"
+            Store.picUrl = NSURL(string: str.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+            
+            
+            }
+            .resume()
     }
+    
     
     //override method
     override func loadView() {
@@ -120,6 +151,5 @@ class VC_MainSence: VC_HasExtraMenu{
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        super.prepareForSegue(segue, sender: sender)
     }
 }

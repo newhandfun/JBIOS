@@ -21,16 +21,20 @@ class VC_HasExtraMenu: VC_BaseVC {
     @IBOutlet var upExtraView1: UIView!
     @IBOutlet var upExtraView2: UIView!
     
+    //black background
+    @IBOutlet weak var view_halfBlack: UIView!
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-//        consLead_extra.constant -= extraViewDistance
-//        cter_extra.layoutIfNeeded()
-////        print(consLead_extra.constant)
     }
     
     func closeExtraView(times : NSTimeInterval){
         UIView.animateWithDuration(times, animations: {self.cter_extra.transform = CGAffineTransformMakeTranslation(self.cter_extra.transform.tx - self.extraViewDistance, self.cter_extra.transform.ty)})
         isClose = true
+        
+        UIView.animateWithDuration(times, animations: {
+            self.view_halfBlack.alpha = 0
+        })
         
         let z:CGFloat = 2
         if upExtraView0 != nil{
@@ -47,6 +51,10 @@ class VC_HasExtraMenu: VC_BaseVC {
     func openExtraView(times : NSTimeInterval)  {
         UIView.animateWithDuration(times, animations: {self.cter_extra.transform = CGAffineTransformMakeTranslation(self.cter_extra.transform.tx + self.extraViewDistance,self.cter_extra.transform.ty)})
         isClose = false
+        
+        UIView.animateWithDuration(times, animations: {
+            self.view_halfBlack.alpha = 0.5
+        })
         
         let z:CGFloat = 0
         if upExtraView0 != nil{

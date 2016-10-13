@@ -17,69 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         let value = FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
-        var initialViewController: UIViewController
-        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
-                    self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
-        if(FBSDKAccessToken.currentAccessToken() != nil){
-            
-            
-            //user
-            let parameters = ["fields": "id, name, first_name, last_name, picture.type(normal),gender, email"]
-            
-            let vc = mainStoryboard.instantiateViewControllerWithIdentifier("Main") as! VC_MainSence
-            
-            FBSDKGraphRequest(graphPath: "me", parameters:parameters).startWithCompletionHandler({ (connection, result, error) -> Void in
-                if (error != nil){
-                    print(error)
-                    return
-                }
-                StaticUserData.FBid = Int((result["FBid"] as? String)!)!
-                StaticUserData.name = result["name"] as? String
-                StaticUserData.email = result["email"] as? String
-                StaticUserData.gender = result["gender"]as? String
-                StaticUserData.nickname = StaticUserData.name
-                StaticUserData.isFB = true
-                
-                //picture
-                var pictureUrl = ""
-                
-                if let picture = result["picture"] as? NSDictionary,data = picture["data"] as? NSDictionary, url = data["url"] as? String {
-                    pictureUrl = url
-                }
-                
-//                if let picture = result["picture"] as? NSDictionary, data = picture["data"] as? NSDictionary, url = data["url"] as? String {
-//                    pictureUrl = url
-//                }
-                
-                let url = NSURL(string: pictureUrl)
-                NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler:
-                    { (data, response, error) -> Void in
-                    if error != nil {
-                        print(error)
-                        return
-                    }else{
-                    
-                    let image = UIImage(data: data!)
-//                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//                        StaticUserData.photo = image!
-//                    })
-                    StaticUserData.photo = image!
-                    }
-                }).resume()
-            })
-            initialViewController = vc
-            
-        }else{
-            initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Login")
-        }
-        
-        self.window?.rootViewController = initialViewController
-        
-        self.window?.makeKeyAndVisible()
-        
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+
         
         return value
     }
