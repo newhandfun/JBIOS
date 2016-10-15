@@ -19,6 +19,8 @@ class VC_Result: VC_HasExtraMenu {
     @IBOutlet weak var btn_time: UIButton!
     @IBOutlet weak var mapKit_map: MKMapView!
     
+    let emptyString : String = "新增的用戶沒有提供,十分抱歉"
+    
     let UIRotation = CGFloat(M_PI)
     
     var imageTimer = NSTimer()
@@ -55,9 +57,13 @@ class VC_Result: VC_HasExtraMenu {
                     }else{
                         let image = UIImage(data: data!)
                         dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                            if(image != nil){
                             Store.picImg = image!
                             self.img_store.image = Store.picImg
-                            self.imageTimer.invalidate()
+                                self.imageTimer.invalidate()
+                            }else{
+                                print("沒圖片是要怎麼提供Ｒ")
+                            }
                         })
                     }
             }).resume()
@@ -68,15 +74,23 @@ class VC_Result: VC_HasExtraMenu {
     }
     
     @IBAction func clickTimes(sender: AnyObject) {
+        if(Store.time == "Optional(\(""))"){
+            Store.time = emptyString
+        }
         showMessage(Store.time, buttonText: "我知道了！")
     }
     
     @IBAction func clickPhone(sender: AnyObject) {
-        print(Store.tel)
+        if(Store.tel == "Optional(\(""))"){
+            Store.tel = emptyString
+        }
         showMessage(Store.tel, buttonText: "我知道了！")
     }
     
     @IBAction func clickAddress(sender: AnyObject) {
+        if(Store.address == "Optional(\(""))"){
+            Store.address = emptyString
+        }
         showMessage(Store.address, buttonText: "我知道了！")
     }
     
@@ -85,6 +99,11 @@ class VC_Result: VC_HasExtraMenu {
     }
     
     func goToDiscuss(sender :AnyObject){
+        
+//        if Store.Discuss != nil{
+//            self.performSegueWithIdentifier("Discuss", sender: sender)
+//        }
+        
         NSURLSession.sharedSession().dataTaskWithRequest(
         Store.buildCommentReqest()) { data, response, error in
             guard error == nil && data != nil else {                                                          // check for fundamental networking error
@@ -103,7 +122,10 @@ class VC_Result: VC_HasExtraMenu {
             
                 //get comment
                 Store.Discuss = StaticUserData.decodeJsonArray (result)
-                self.performSegueWithIdentifier("Discuss", sender: sender)
+            
+                if(Store.Discuss != nil){
+                    self.performSegueWithIdentifier("Discuss", sender: sender)
+                }
             }
             .resume()
     }

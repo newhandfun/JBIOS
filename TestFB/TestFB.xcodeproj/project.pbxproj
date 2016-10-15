@@ -46,6 +46,8 @@
 		F9FD510D1D4DED75006A3AF3 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FD510B1D4DED75006A3AF3 /* FBSDKLoginKit.framework */; };
 		F9FD51101D4DEE57006A3AF3 /* FBSDKHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FD510F1D4DEE57006A3AF3 /* FBSDKHeader.m */; };
 		F9FD51121D4DF745006A3AF3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F9FD51111D4DF745006A3AF3 /* Podfile */; };
+		F9FF05681DB278DF003B73AB /* StaticFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF05671DB278DF003B73AB /* StaticFunction.swift */; };
+		F9FF056A1DB28F5C003B73AB /* VC_OfferStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF05691DB28F5C003B73AB /* VC_OfferStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		F9FD510E1D4DEE56006A3AF3 /* TestFB-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestFB-Bridging-Header.h"; sourceTree = "<group>"; };
 		F9FD510F1D4DEE57006A3AF3 /* FBSDKHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSDKHeader.m; sourceTree = "<group>"; };
 		F9FD51111D4DF745006A3AF3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		F9FF05671DB278DF003B73AB /* StaticFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticFunction.swift; sourceTree = "<group>"; };
+		F9FF05691DB28F5C003B73AB /* VC_OfferStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC_OfferStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,7 @@
 				F929E5681D775A3600BFE8E5 /* VC_Login.swift */,
 				F97A8D3E1D7EFDDA00D9D2B4 /* VC_tutorialPage.swift */,
 				F971BFF51DAB58B8000AF68E /* VC_Discuss.swift */,
+				F9FF05691DB28F5C003B73AB /* VC_OfferStore.swift */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				F9FD50E81D4DECCE006A3AF3 /* Info.plist */,
 				F9FD51111D4DF745006A3AF3 /* Podfile */,
 				F9058E351D50593500862E7F /* AboutUs.storyboard */,
+				F9FF05671DB278DF003B73AB /* StaticFunction.swift */,
 			);
 			path = TestFB;
 			sourceTree = "<group>";
@@ -430,6 +436,8 @@
 				F9AE0E701D5B6822000C8B91 /* PVC_tutorial.swift in Sources */,
 				F910C1A11D6434B6003367A7 /* CV_GoalSelection.swift in Sources */,
 				F971BFF61DAB58B8000AF68E /* VC_Discuss.swift in Sources */,
+				F9FF05681DB278DF003B73AB /* StaticFunction.swift in Sources */,
+				F9FF056A1DB28F5C003B73AB /* VC_OfferStore.swift in Sources */,
 				F906A41E1D73DFFB00B721F0 /* JBdata.swift in Sources */,
 				F9058E341D50504000862E7F /* PostData.swift in Sources */,
 				F9FD50DD1D4DECCE006A3AF3 /* AppDelegate.swift in Sources */,

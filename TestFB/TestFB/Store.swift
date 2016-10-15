@@ -40,12 +40,28 @@ struct Store {
         request.HTTPMethod = "POST"
         if(id != nil){
         let idToString = String(id!)
-        let str = "hash=This is Ivan Speaking.&storeID=16"
+        let str = "hash=This is Ivan Speaking.&storeID=" + idToString
             //+ idToString
         request.HTTPBody = str.dataUsingEncoding(NSUTF8StringEncoding)
             print("shop comment request = " + str )
         }else{
             print("沒店家資訊")
+        }
+        return request
+    }
+    
+    static func buildDiscussReqest(content : String!)->NSMutableURLRequest{
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://140.122.184.227/~ivan/JB/Comment/addComment.php")!);
+        request.HTTPMethod = "POST"
+        if(id != nil){
+            let idToString = String(id!)
+            var str = StaticUserData.addParam("hash=This is Ivan Speaking.", key: "userID", value: StaticUserData.userID!)
+            str = StaticUserData.addParam(str, key: "storeID", value: idToString)
+            str = StaticUserData.addParam(str, key: "content", value: content)
+            request.HTTPBody = str.dataUsingEncoding(NSUTF8StringEncoding)
+            print("shop addDiscuss request = " + str )
+        }else{
+            print("評論失敗，連建造封包都無法")
         }
         return request
     }
