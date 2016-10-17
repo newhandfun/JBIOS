@@ -50,6 +50,12 @@ class VC_ExtraOption: VC_BaseVC {
         initialSelf()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? VC_StoreList{
+            vc.storeList = StaticUserData.storeList
+        }
+    }
+    
     func initialSelf() {
         if let _main = self.parentViewController{
             parent = _main as! VC_HasExtraMenu
@@ -82,6 +88,20 @@ class VC_ExtraOption: VC_BaseVC {
             signSwing(1,rotaion: 0)
         }
     }
+    @IBAction func clickSearch(sender: AnyObject) {
+            parent.CallActivityIndicator("讀取店家資料中")
+            builddataTaskWithRequest(buildJBRequest("", urlAfterJB:
+                "Store/getAllStore.php", log: "拿取店家資料："), requestType: "店家陣列", doAfterAll: {}()
+            )
+    }
+    
+    override func doAfterRequest() {
+        if StaticUserData.storeList != nil {
+            parent.CencleActivityIndicator()
+            performSegueWithIdentifier("Find", sender: self)
+        }
+    }
+
     
     func bellSwing(time:NSTimeInterval,rotaion : CGFloat){
         

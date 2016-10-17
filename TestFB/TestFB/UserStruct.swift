@@ -35,6 +35,9 @@ struct StaticUserData {
     static var FBid : Int = 0
     static var isFB : Bool = false
     
+    //StoreList
+    static var storeList : [String:NSObject]?
+    
     static func convertFBResultToProperty(result:AnyObject!,function:()){
         StaticUserData.name = result["name"] as? String
         StaticUserData.email = result["email"] as? String
@@ -95,6 +98,7 @@ struct StaticUserData {
                 // With value as Int
                 json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String:String]
             }
+            print(json)
             return json
         } catch {
             print(error)
@@ -103,8 +107,21 @@ struct StaticUserData {
         return json
     }
     
-    static func encodeJson(){
+    static func decodeJsonToStore(str : NSString){
+        do{
+            if let data = str.dataUsingEncoding(NSUTF8StringEncoding) {
+                let json = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! NSDictionary
+                storeList = json as?  [String:NSObject]
+                let house = storeList!["result"] as! NSArray
+                print((house[0] as! [String:NSObject])["name"])
+            }
+        }catch{
+        print(error)
+        print("陣列抓不成功")
+        }
+        print("")
     }
+
     
     static func decodeJsonArray(str : NSString)->[[String:String]]?{
         var json : [[String:String]]

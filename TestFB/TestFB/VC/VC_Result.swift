@@ -63,6 +63,8 @@ class VC_Result: VC_HasExtraMenu {
                                 self.imageTimer.invalidate()
                             }else{
                                 print("沒圖片是要怎麼提供Ｒ")
+                                self.imageTimer.invalidate()
+                                return
                             }
                         })
                     }
@@ -90,8 +92,11 @@ class VC_Result: VC_HasExtraMenu {
     @IBAction func clickAddress(sender: AnyObject) {
         if(Store.address == "Optional(\(""))"){
             Store.address = emptyString
+            return
         }
-        showMessage(Store.address, buttonText: "我知道了！")
+        performSegueWithIdentifier("Map", sender: self)
+
+//        showMessage(Store.address, buttonText: "我知道了！")
     }
     
     @IBAction func clickComment(sender: AnyObject) {
@@ -100,9 +105,7 @@ class VC_Result: VC_HasExtraMenu {
     
     func goToDiscuss(sender :AnyObject){
         
-//        if Store.Discuss != nil{
-//            self.performSegueWithIdentifier("Discuss", sender: sender)
-//        }
+        self.CallActivityIndicator("取得評論～(連點看看？)")
         
         NSURLSession.sharedSession().dataTaskWithRequest(
         Store.buildCommentReqest()) { data, response, error in
@@ -137,5 +140,9 @@ class VC_Result: VC_HasExtraMenu {
         self.presentViewController(quetion, animated: true, completion: nil);
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let map = segue.destinationViewController as? VC_Map{
+            map.address = Store.address
+        }
+    }
 }

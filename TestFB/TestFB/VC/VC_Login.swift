@@ -22,6 +22,7 @@ class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         if FBSDKAccessToken.currentAccessToken() != nil{
+            CallActivityIndicator("臉書登入中～請稍候");
             getFBUserData()
             loginTimer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: Selector("goToMainSence"),userInfo: nil, repeats: true)
         }

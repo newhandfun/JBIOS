@@ -15,6 +15,8 @@ class VC_Profile : VC_BaseVC{
     @IBOutlet weak var text_email: UITextField!
     @IBOutlet weak var text_name: UITextField!
     
+    @IBOutlet weak var img_men: UIImageView!
+    @IBOutlet weak var img_women: UIImageView!
     
     override func viewDidLoad() {
         text_email.text = StaticUserData.email;
@@ -22,7 +24,13 @@ class VC_Profile : VC_BaseVC{
             img_profile.image = StaticUserData.photo
         }
         text_name.text = StaticUserData.name;
-
+        
+        img_women.hidden = true
+        img_men.hidden = true
+        
+        if StaticUserData.gender == "female"
+        {img_women.hidden = false}
+        else{img_men.hidden = false}
     }
     
     override func viewDidAppear(animated: Bool) {

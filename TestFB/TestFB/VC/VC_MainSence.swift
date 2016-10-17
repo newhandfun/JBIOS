@@ -95,7 +95,11 @@ class VC_MainSence: VC_HasExtraMenu{
     }
     
     //store data
+    
+    var resultTimer = NSTimer()
+    
     @IBAction func click_lid(sender: AnyObject) {
+        CallActivityIndicator("尋找店家(可連點喔)")
         var result : NSString = NSString()
         NSURLSession.sharedSession().dataTaskWithRequest( Store.buildReqest(seg_goal.selectedSegmentIndex + 1, price: Int(silder_price.value/50))) { data, response, error in
             guard error == nil && data != nil else {                                                          // check for fundamental networking error
@@ -120,11 +124,10 @@ class VC_MainSence: VC_HasExtraMenu{
             Store.address = json["address"]!
             Store.time = json["b_Hour"]!
             Store.tel = json["tel"]!
-            self.performSegueWithIdentifier("Result", sender: self)
             let str = "http://140.122.184.227/~ivan/JB/pic/\(Store.name)/店面_\(Store.name)_1.jpg"
             Store.picUrl = NSURL(string: str.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
-            
-            
+            self.CencleActivityIndicator()
+            self.performSegueWithIdentifier("Result", sender: self)
             }
             .resume()
     }
@@ -150,6 +153,5 @@ class VC_MainSence: VC_HasExtraMenu{
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    }
+
 }
