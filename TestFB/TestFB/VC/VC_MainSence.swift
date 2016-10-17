@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VC_MainSence: VC_HasExtraMenu{
+class VC_MainSence: VC_HasExtraMenu,UICollectionViewDelegate,UICollectionViewDataSource{
     
     //UserData
     var userData : User = User()
@@ -35,6 +35,7 @@ class VC_MainSence: VC_HasExtraMenu{
     @IBOutlet weak var silder_price: UISlider!
     @IBOutlet weak var lbl_price: UILabel!
     @IBOutlet weak var seg_goal: UISegmentedControl!
+    @IBOutlet weak var CV_goal: UICollectionView!
     var currentPrice : Int = 100
     
     @IBAction func clickMenuButton(sender: AnyObject) {
@@ -94,22 +95,42 @@ class VC_MainSence: VC_HasExtraMenu{
         lbl_price.text = String(currentPrice)
     }
     
+    //price by collection
+    //coll
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Goal", forIndexPath: indexPath) as! CVC_Goal
+        switch indexPath {
+        case 1:
+            cell.img_present.image = UIImage(contentsOfFile: "for_full.png")
+            break
+        default:
+            break
+        }
+        return cell
+    }
+    
     //store data
-    
-    var resultTimer = NSTimer()
-    
     @IBAction func click_lid(sender: AnyObject) {
-        CallActivityIndicator("尋找店家(可連點喔)")
+        CallActivityIndicator("尋找店家中")
         var result : NSString = NSString()
         NSURLSession.sharedSession().dataTaskWithRequest( Store.buildReqest(seg_goal.selectedSegmentIndex + 1, price: Int(silder_price.value/50))) { data, response, error in
             guard error == nil && data != nil else {                                                          // check for fundamental networking error
                 print("error=\(error)")
+                self.CencleActivityIndicator()
+                self.showMessage("\(error)",buttonText: "確認");
                 return
             }
             
             if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {           // check for http errors
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
                 print("response = \(response)")
+                self.CencleActivityIndicator()
+                self.showMessage("statusCode should be 200, but is \(httpStatus.statusCode)",buttonText: "確認")
+                return
             }
             
             result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
@@ -132,7 +153,6 @@ class VC_MainSence: VC_HasExtraMenu{
             .resume()
     }
     
-    
     //override method
     override func loadView() {
         super.loadView()
@@ -140,18 +160,38 @@ class VC_MainSence: VC_HasExtraMenu{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let layout = UICollectionViewFlowLayout()
+        
+        layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
+
+        layout.minimumLineSpacing = 0
+        
+        layout.itemSize = CGSizeMake(
+            CGFloat(CV_goal.bounds.width)/3 - 10,
+            CGFloat(CV_goal.bounds.height)/2 - 10)
+        CV_goal.backgroundView?.backgroundColor = UIColor(white: 1,alpha: 0)
+        CV_goal.collectionViewLayout = layout
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         silder_price.continuous = false
         view_tutorial.layer.zPosition = 2
+        
+        CV_goal.delegate = self
+            CV_goal.dataSource = self
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
-    
 
 }
+
+class CVC_Goal : UICollectionViewCell {
+    
+    @IBOutlet weak var txt_name: UITextField!
+    @IBOutlet weak var img_present: UIImageView!
+}
+
+

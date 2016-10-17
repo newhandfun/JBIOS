@@ -93,13 +93,7 @@ class VC_Discuss : VC_BaseVC,UITableViewDataSource,UITableViewDelegate{
         
         return cell
     }
-    
-    func showMessage(message:String!,buttonText:String!){
-        let quetion = UIAlertController(title: nil, message: message, preferredStyle: .Alert);
-        let callaction = UIAlertAction(title: buttonText, style: .Default , handler:nil);
-        quetion.addAction(callaction);
-        self.presentViewController(quetion, animated: true, completion: nil);
-    }
+
 }
 
 class TVC_Discuss :UITableViewCell{

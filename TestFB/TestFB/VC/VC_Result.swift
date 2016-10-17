@@ -111,12 +111,17 @@ class VC_Result: VC_HasExtraMenu {
         Store.buildCommentReqest()) { data, response, error in
             guard error == nil && data != nil else {                                                          // check for fundamental networking error
                 print("error=\(error)")
+                self.CencleActivityIndicator()
+                self.showMessage("\(error)",buttonText: "確認");
                 return
             }
             
             if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {           // check for http errors
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
                 print("response = \(response)")
+                self.CencleActivityIndicator()
+                self.showMessage("statusCode should be 200, but is \(httpStatus.statusCode)",buttonText: "確認")
+                return
             }
             
             let result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
@@ -133,12 +138,7 @@ class VC_Result: VC_HasExtraMenu {
             .resume()
     }
     
-    func showMessage(message:String!,buttonText:String!){
-        let quetion = UIAlertController(title: nil, message: message, preferredStyle: .Alert);
-        let callaction = UIAlertAction(title: buttonText, style: .Default , handler:nil);
-        quetion.addAction(callaction);
-        self.presentViewController(quetion, animated: true, completion: nil);
-    }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let map = segue.destinationViewController as? VC_Map{
