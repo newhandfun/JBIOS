@@ -9,7 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 
-class VC_BaseVC: UIViewController {
+class VC_BaseVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     internal var user: User=User()
     
@@ -17,6 +17,15 @@ class VC_BaseVC: UIViewController {
     var strLabel = UILabel()
     var background = UIView()
     var messageFrame = UIView()
+    
+    //照片
+    var img_picture : UIImage?
+    var str_picture : String?
+    
+    //測試用按鈕
+    @IBOutlet weak var btn_chooseImage: UIButton!
+    @IBOutlet weak var btn_Test: UIButton!
+    
     
     override func shouldAutorotate() -> Bool {
         return false
@@ -45,13 +54,12 @@ class VC_BaseVC: UIViewController {
         )
         request.HTTPMethod = "POST"
         request.HTTPBody = requestString.dataUsingEncoding(NSUTF8StringEncoding)
-        if(log != nil){
+        if(log != ""){
             print(log! + requestString)}
         return request
     }
     
-    func builddataTaskWithRequest(request : NSMutableURLRequest,requestType : String?,doAfterAll:())
-    {
+    func builddataTaskWithRequest(request : NSMutableURLRequest,requestType : String?){
         NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
             guard error == nil && data != nil else {                                                          // check for fundamental networking error
                 print("error=\(error)")
@@ -69,21 +77,42 @@ class VC_BaseVC: UIViewController {
             }
             
             let result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
-            
-//            print(requestType! + ":" + (result as String))
-            
-            
-                if(result != "{\"success\":\"False\"}"){
-                StaticUserData.decodeJsonToStore(result)
-                self.doAfterRequest()
-                }
+            print(result)
+            if(result != "{\"success\":\"False\"}"){
+                self.doAfterRequest(result)
+            }
             }
             .resume()
+
     }
     
-    func doAfterRequest(){
+    func builddataTaskWithRequest(request : NSMutableURLRequest,requestType : String?,doAfterAll :())
+    {
+        self.builddataTaskWithRequest(request, requestType: requestType)
     }
     
+    func doAfterRequest(result : NSString){
+    }
+    
+    //test
+    @IBAction func click_chooseImage(sender: AnyObject) {
+        let ImagePicker = UIImagePickerController()
+        ImagePicker.delegate = self
+        ImagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        
+        self.presentViewController(ImagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func clickTest(sender: AnyObject) {
+        if(str_picture! == ""){
+            return
+        }
+        
+        let str = StaticUserData.addParam("", key: "img", value: str_picture!)
+        builddataTaskWithRequest(buildJBRequest(str, urlAfterJB: "test/test4img.php", log: ""), requestType: "")
+    }
+    
+    //LoadingSomething
     func CallActivityIndicator(msg : String!){
         background.hidden = false
         strLabel = UILabel(frame: CGRect(x: 50, y: 0, width: 200, height: 50))
@@ -105,15 +134,32 @@ class VC_BaseVC: UIViewController {
         messageFrame.addSubview(strLabel)
         view.addSubview(background)
     }
-    
     func CencleActivityIndicator(){
         background.hidden = true;
     }
+    
     
     func showMessage(message:String!,buttonText:String!){
         let quetion = UIAlertController(title: nil, message: message, preferredStyle: .Alert);
         let callaction = UIAlertAction(title: buttonText, style: .Default , handler:nil);
         quetion.addAction(callaction);
         self.presentViewController(quetion, animated: true, completion: nil);
+    }
+    
+    //delegate
+    //pickpicturefromfile
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        img_picture = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+        //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+        //            // do some task
+        let imageData : NSData = UIImageJPEGRepresentation(self.img_picture!,0.9)!
+//        let imageData : NSData = UIImagePNGRepresentation(self.img_picture!)!
+        self.str_picture =
+            imageData.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
+        //            });
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

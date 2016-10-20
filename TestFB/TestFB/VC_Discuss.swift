@@ -20,12 +20,15 @@ class VC_Discuss : VC_BaseVC,UITableViewDataSource,UITableViewDelegate{
     
     @IBAction func clickAddDiscuss(sender: AnyObject) {
         
+        //if inputtext is empty, showError to customer
         if(txt_discuss.text == "")
         {
             showMessage("請輸入評論喔~",buttonText: "我知道了！")
             return
         }
         
+        
+        //revent custom return on sending message
         btn_back.enabled = false
         
         NSURLSession.sharedSession().dataTaskWithRequest(
@@ -33,7 +36,7 @@ class VC_Discuss : VC_BaseVC,UITableViewDataSource,UITableViewDelegate{
             txt_discuss.text!
             )) { data, response, error in
             guard error == nil && data != nil else {                                                          // check for fundamental networking error
-                print("error=\(error)")
+                self.showMessage("請檢察網路！若還是發生此情形建議回報此bug。" + String(error), buttonText: "我知道了")
                 return
             }
             

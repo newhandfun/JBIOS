@@ -9,7 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 
-class VC_OfferStore : VC_BaseVC,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+class VC_OfferStore : VC_BaseVC{
     
     enum InputType : Int{
         case phone
@@ -218,19 +218,5 @@ class VC_OfferStore : VC_BaseVC,UIImagePickerControllerDelegate,UINavigationCont
         
     }
     
-    //delegate
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
-        img_uploadImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-//            // do some task
-        let imageData : NSData = UIImageJPEGRepresentation(self.img_uploadImage.image!,0.9)!
-                self.image =
-                    imageData.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
-                self.isImageEncode = true
-//            });
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
+
 }

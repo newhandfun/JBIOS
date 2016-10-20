@@ -117,7 +117,7 @@ struct StaticUserData {
             }
         }catch{
         print(error)
-        print("陣列抓不成功")
+        print("店家名單轉型失敗")
         }
         print("")
     }

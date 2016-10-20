@@ -89,16 +89,19 @@ class VC_ExtraOption: VC_BaseVC {
         }
     }
     @IBAction func clickSearch(sender: AnyObject) {
-            parent.CallActivityIndicator("讀取店家資料中")
-            builddataTaskWithRequest(buildJBRequest("", urlAfterJB:
-                "Store/getAllStore.php", log: "拿取店家資料："), requestType: "店家陣列", doAfterAll: {}()
-            )
+        parent.CallActivityIndicator("讀取店家資料中")
+        builddataTaskWithRequest(buildJBRequest("", urlAfterJB:
+            "Store/getAllStore.php", log: "拿取店家資料："), requestType: "店家陣列", doAfterAll: {}()
+        )
     }
     
-    override func doAfterRequest() {
+    override func doAfterRequest(result : NSString) {
+        StaticUserData.decodeJsonToStore(result)
+        parent.CencleActivityIndicator()
         if StaticUserData.storeList != nil {
-            parent.CencleActivityIndicator()
             performSegueWithIdentifier("Find", sender: self)
+        }else{
+            showMessage("沒有抓到店家！如果網路有開但不行的話請回報此BUG", buttonText: "我知道了")
         }
     }
 

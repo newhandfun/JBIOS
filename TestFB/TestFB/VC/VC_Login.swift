@@ -46,7 +46,7 @@ class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
         fbLoginManager .logInWithReadPermissions(["email","user_friends","public_profile"],fromViewController: self,  handler:  { (result, error) -> Void in
             if (error == nil){
                 let fbloginresult : FBSDKLoginManagerLoginResult = result
-                if(fbloginresult.grantedPermissions.contains("email") )
+            if(fbloginresult.grantedPermissions.contains("email") )
                 {
                     FBSDKProfile.enableUpdatesOnAccessTokenChange(true)
                     self.getFBUserData()
@@ -77,11 +77,12 @@ class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
 
     
     func goToMainSence(){
+        CencleActivityIndicator()
         if(StaticUserData.userID != nil){
             performSegueWithIdentifier("Main", sender: self)
             loginTimer.invalidate()
         }else{
-//            print(StaticUserData.userID)
+            showMessage("請檢查網路狀態～", buttonText: "我知道了")
         }
     }
     

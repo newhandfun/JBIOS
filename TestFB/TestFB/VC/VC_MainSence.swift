@@ -116,41 +116,20 @@ class VC_MainSence: VC_HasExtraMenu,UICollectionViewDelegate,UICollectionViewDat
     //store data
     @IBAction func click_lid(sender: AnyObject) {
         CallActivityIndicator("尋找店家中")
-        var result : NSString = NSString()
-        NSURLSession.sharedSession().dataTaskWithRequest( Store.buildReqest(seg_goal.selectedSegmentIndex + 1, price: Int(silder_price.value/50))) { data, response, error in
-            guard error == nil && data != nil else {                                                          // check for fundamental networking error
-                print("error=\(error)")
-                self.CencleActivityIndicator()
-                self.showMessage("\(error)",buttonText: "確認");
-                return
-            }
-            
-            if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {           // check for http errors
-                print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(response)")
-                self.CencleActivityIndicator()
-                self.showMessage("statusCode should be 200, but is \(httpStatus.statusCode)",buttonText: "確認")
-                return
-            }
-            
-            result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
-            
-            print("res = \(result)")
-            
-            //try to decode
-            
-            let json = StaticUserData.decodeJson(result)
-            Store.name = json["name"]!
-            Store.id = Int(json["id"]! as String)!
-            Store.address = json["address"]!
-            Store.time = json["b_Hour"]!
-            Store.tel = json["tel"]!
-            let str = "http://140.122.184.227/~ivan/JB/pic/\(Store.name)/店面_\(Store.name)_1.jpg"
-            Store.picUrl = NSURL(string: str.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
-            self.CencleActivityIndicator()
-            self.performSegueWithIdentifier("Result", sender: self)
-            }
-            .resume()
+        builddataTaskWithRequest(Store.buildReqest(seg_goal.selectedSegmentIndex + 1, price: Int(silder_price.value/50)), requestType: "!")
+    }
+    
+    override func doAfterRequest(result: NSString) {
+        let json = StaticUserData.decodeJson(result)
+        Store.name = json["name"]!
+        Store.id = Int(json["id"]! as String)!
+        Store.address = json["address"]!
+        Store.time = json["b_Hour"]!
+        Store.tel = json["tel"]!
+        let str = "http://140.122.184.227/~ivan/JB/pic/\(Store.name)/店面_\(Store.name)_1.jpg"
+        Store.picUrl = NSURL(string: str.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+        self.CencleActivityIndicator()
+        self.performSegueWithIdentifier("Result", sender: self)
     }
     
     //override method

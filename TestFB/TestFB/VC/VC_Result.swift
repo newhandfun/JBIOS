@@ -138,11 +138,11 @@ class VC_Result: VC_HasExtraMenu {
             .resume()
     }
     
-
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let map = segue.destinationViewController as? VC_Map{
             map.address = Store.address
         }
     }
+    
+    
 }
