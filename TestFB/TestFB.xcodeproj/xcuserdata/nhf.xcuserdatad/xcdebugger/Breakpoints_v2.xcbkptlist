@@ -220,7 +220,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestFB/VC/VC_Result.swift"
-            timestampString = "498414157.016412"
+            timestampString = "498815632.895915"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
@@ -315,28 +315,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestFB/VC/VC_Result.swift"
-            timestampString = "498582654.733001"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "prepareForSegue(_:sender:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "TestFB/VC_JoinUs.swift"
-            timestampString = "498396922.078629"
+            timestampString = "498828737.991739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "clickJoinUs(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -348,11 +332,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestFB/VC/VC_BaseVC.swift"
-            timestampString = "498672784.339956"
+            timestampString = "498833472.422052"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "CallActivityIndicator(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -412,11 +396,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestFB/VC/VC_BaseVC.swift"
-            timestampString = "498672784.339956"
+            timestampString = "498833472.422052"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -428,12 +412,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestFB/VC/VC_BaseVC.swift"
-            timestampString = "498672784.339956"
+            timestampString = "498833472.422052"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "builddataTaskWithRequest(_:requestType:doAfterAll:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestFB/VC/VC_BaseVC.swift"
+            timestampString = "498833472.422052"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "builddataTaskWithRequest(_:requestType:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestFB/VC/VC_BaseVC.swift"
+            timestampString = "498833472.422052"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "builddataTaskWithRequest(_:requestType:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -17,6 +17,11 @@ class VC_Comment: VC_BaseVC,UIPickerViewDelegate,UIPickerViewDataSource {
     @IBOutlet weak var txtView_content: UITextView!
     @IBOutlet weak var btn_type: UIButton!
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        txtView_content.endEditing(true)
+    }
+    
     //pickview
     var causeKind : [String] = ["針對介面","針對現有功能(不足,多餘或是任何想法)","期待功能","Bug回報","改善建議"]
     
@@ -56,4 +61,15 @@ class VC_Comment: VC_BaseVC,UIPickerViewDelegate,UIPickerViewDataSource {
         super.loadView()
     }
     
+    var lastword : String! = ""
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n"){
+            if(lastword == "\n"){
+            txtView_content.endEditing(true)
+            return false
+            }
+        }
+        lastword = text
+        return true
+    }
 }

@@ -59,13 +59,12 @@ class VC_ExtraOption: VC_BaseVC {
     func initialSelf() {
         if let _main = self.parentViewController{
             parent = _main as! VC_HasExtraMenu
-            parent.extraViewDistance = self.extraViewDistance
         }
         
         setAnchor(CGPointMake(0.5,0), btn: btn_bell)
         setAnchor(CGPointMake(0.5,0), view: view_sign)
         
-        if parent.isClose {
+        if !parent.isClose {
             parent.closeExtraView(0)
         }
         
@@ -76,14 +75,14 @@ class VC_ExtraOption: VC_BaseVC {
         if !parent.isClose {
             parent.closeExtraView(0.5)
             bellSwing(0.5,rotaion: 1)
-            signSwing(0.5,rotaion: 0.5)
+            signSwing(0.5,rotaion: 0.1)
             bellSwing(1.2,rotaion: 0)
             signSwing(1,rotaion: 0)
         }
         else{
             parent.openExtraView(0.5)
             bellSwing(0.5,rotaion: -1)
-            signSwing(0.5,rotaion: -0.5)
+            signSwing(0.5,rotaion: -0.1)
             bellSwing(1.2,rotaion: 0)
             signSwing(1,rotaion: 0)
         }
@@ -121,43 +120,5 @@ class VC_ExtraOption: VC_BaseVC {
                 self.view_sign.transform = CGAffineTransformMakeRotation(rotaion)
             }, completion: nil)
     }
-    
-    
-    func setAnchor(anchorPoint : CGPoint, btn : UIButton){
-        var newPoint = CGPointMake(btn.bounds.size.width * anchorPoint.x, btn.bounds.size.height * anchorPoint.y)
-        var oldPoint = CGPointMake(btn.bounds.size.width * btn.layer.anchorPoint.x, btn.bounds.size.height * btn.layer.anchorPoint.y)
-        
-        newPoint = CGPointApplyAffineTransform(newPoint, btn.transform)
-        oldPoint = CGPointApplyAffineTransform(oldPoint, btn.transform)
-        
-        var position : CGPoint = btn.layer.position
-        
-        position.x -= oldPoint.x
-        position.x += newPoint.x;
-        
-        position.y -= oldPoint.y;
-        position.y += newPoint.y;
-        
-        btn.layer.position = position;
-        btn.layer.anchorPoint = anchorPoint;
-    }
-    
-    func setAnchor(anchorPoint : CGPoint,view:UIView) {
-        var newPoint = CGPointMake(view.bounds.size.width * anchorPoint.x, view.bounds.size.height * anchorPoint.y)
-        var oldPoint = CGPointMake(view.bounds.size.width * view.layer.anchorPoint.x, view.bounds.size.height * view.layer.anchorPoint.y)
-        
-        newPoint = CGPointApplyAffineTransform(newPoint, view.transform)
-        oldPoint = CGPointApplyAffineTransform(oldPoint, view.transform)
-        
-        var position : CGPoint = view.layer.position
-        
-        position.x -= oldPoint.x
-        position.x += newPoint.x;
-        
-        position.y -= oldPoint.y;
-        position.y += newPoint.y;
-        
-        view.layer.position = position;
-        view.layer.anchorPoint = anchorPoint;
-    }
+
 }

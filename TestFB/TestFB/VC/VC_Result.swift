@@ -106,36 +106,16 @@ class VC_Result: VC_HasExtraMenu {
     func goToDiscuss(sender :AnyObject){
         
         self.CallActivityIndicator("取得評論～(連點看看？)")
+        self.builddataTaskWithRequest(Store.buildCommentReqest(), requestType: "")
+    }
+    
+    override func doAfterRequest(result: NSString) {
+        //get comment
+        Store.Discuss = StaticUserData.decodeJsonArray (result)
         
-        NSURLSession.sharedSession().dataTaskWithRequest(
-        Store.buildCommentReqest()) { data, response, error in
-            guard error == nil && data != nil else {                                                          // check for fundamental networking error
-                print("error=\(error)")
-                self.CencleActivityIndicator()
-                self.showMessage("\(error)",buttonText: "確認");
-                return
-            }
-            
-            if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {           // check for http errors
-                print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(response)")
-                self.CencleActivityIndicator()
-                self.showMessage("statusCode should be 200, but is \(httpStatus.statusCode)",buttonText: "確認")
-                return
-            }
-            
-            let result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
-            
-            print("res = \(result)")
-            
-                //get comment
-                Store.Discuss = StaticUserData.decodeJsonArray (result)
-            
-                if(Store.Discuss != nil){
-                    self.performSegueWithIdentifier("Discuss", sender: sender)
-                }
-            }
-            .resume()
+        if(Store.Discuss != nil){
+            self.performSegueWithIdentifier("Discuss", sender: self)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

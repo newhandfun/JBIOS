@@ -24,6 +24,7 @@ class VC_JoinUs : VC_BaseVC{
             txt_hopeTask == nil ||
             txt_FB == nil
             ){
+            showMessage("請填好填滿！", buttonText: "知道啦")
             return;
         }
         
@@ -34,5 +35,15 @@ class VC_JoinUs : VC_BaseVC{
         builddataTaskWithRequest(buildJBRequest(str, urlAfterJB: "Message/join_us.php", log: "JoinUS"), requestType: "加入我們", doAfterAll: {
             print("完成！")
         }())
+    }
+    
+    var lastWord = ""
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n"&&lastWord == "\n"){
+        txtView_whyJoinUs.endEditing(true)
+            return false
+        }
+        lastWord = text
+        return true
     }
 }

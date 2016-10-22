@@ -127,7 +127,9 @@ class VC_MainSence: VC_HasExtraMenu,UICollectionViewDelegate,UICollectionViewDat
         Store.time = json["b_Hour"]!
         Store.tel = json["tel"]!
         let str = "http://140.122.184.227/~ivan/JB/pic/\(Store.name)/店面_\(Store.name)_1.jpg"
-        Store.picUrl = NSURL(string: str.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            Store.picUrl = NSURL(string: str.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+        })
         self.CencleActivityIndicator()
         self.performSegueWithIdentifier("Result", sender: self)
     }

@@ -133,14 +133,14 @@ class VC_OfferStore : VC_BaseVC{
             })
             }else{checkString += "聯絡電話\n"}
 
-            if self.isImageEncode{
-                alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
-                    textField.enabled = false
-                    textField.borderStyle = UITextBorderStyle
-                        .None
-                    textField.text = "有圖片"
-                })
-            }else{checkString += "店家圖片"}
+//            if self.isImageEncode{
+//                alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
+//                    textField.enabled = false
+//                    textField.borderStyle = UITextBorderStyle
+//                        .None
+//                    textField.text = "有圖片"
+//                })
+//            }else{checkString += "店家圖片"}
             
             if checkString != ""{
                 alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
@@ -158,17 +158,22 @@ class VC_OfferStore : VC_BaseVC{
             {
             case InputType.name:
                 self.name = textField.text!
+                self.btn_name.alpha = 1.0
                 break
             case InputType.time:
                 self.time = textField.text!
+                self.btn_time.alpha = 1.0
                 break
             case InputType.address:
                 self.address = textField.text!
+                self.btn_address.alpha = 1.0
                 break
             case InputType.image:
+                self.btn_uploadImage.alpha = 1.0
                 break
             case InputType.phone:
                 self.phone = textField.text!
+                self.btn_phone.alpha = 1.0
                 break
             case InputType.Confirm:
                 if checkString == ""

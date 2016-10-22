@@ -11,8 +11,8 @@ import UIKit
 class VC_HasExtraMenu: VC_BaseVC {
     
     @IBOutlet var cter_extra: UIView!
+    @IBOutlet weak var view_extraAnchor: UIView!
     var extraViewDistance : CGFloat = 90
-    
     @IBOutlet weak var consLead_extra: NSLayoutConstraint!
     var isClose :Bool = true
     
@@ -28,8 +28,16 @@ class VC_HasExtraMenu: VC_BaseVC {
         super.viewWillAppear(animated)
     }
     
+    override func viewDidLoad() {
+        view_halfBlack.alpha = 0
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+                extraViewDistance = self.cter_extra.bounds.width - self.view_extraAnchor.bounds.width
+    }
+    
     func closeExtraView(times : NSTimeInterval){
-        UIView.animateWithDuration(times, animations: {self.cter_extra.transform = CGAffineTransformMakeTranslation(self.cter_extra.transform.tx - self.extraViewDistance, self.cter_extra.transform.ty)})
+        UIView.animateWithDuration(times, animations: {self.cter_extra.transform = CGAffineTransformMakeTranslation( self.cter_extra.transform.tx - self.extraViewDistance , self.cter_extra.transform.ty)})
         isClose = true
         
         UIView.animateWithDuration(times, animations: {

@@ -9,7 +9,8 @@
 import UIKit
 import FBSDKCoreKit
 
-class VC_BaseVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class VC_BaseVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate ,
+    UITextFieldDelegate,UITextViewDelegate{
     
     internal var user: User=User()
     
@@ -21,6 +22,7 @@ class VC_BaseVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
     //照片
     var img_picture : UIImage?
     var str_picture : String?
+    @IBOutlet weak var img_displayPic : UIImageView!
     
     //測試用按鈕
     @IBOutlet weak var btn_chooseImage: UIButton!
@@ -43,7 +45,7 @@ class VC_BaseVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
         }
     }
     
-    
+    //Request
     func buildJBRequest(input : String,urlAfterJB:String!,log:String?) -> NSMutableURLRequest{
         var requestString = "hash=This is Ivan Speaking."
         if input != ""{
@@ -146,7 +148,52 @@ class VC_BaseVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
         self.presentViewController(quetion, animated: true, completion: nil);
     }
     
+    //eazy to use
+    //UI anchor
+    func setAnchor(anchorPoint : CGPoint, btn : UIControl){
+        var newPoint = CGPointMake(btn.bounds.size.width * anchorPoint.x, btn.bounds.size.height * anchorPoint.y)
+        var oldPoint = CGPointMake(btn.bounds.size.width * btn.layer.anchorPoint.x, btn.bounds.size.height * btn.layer.anchorPoint.y)
+        
+        newPoint = CGPointApplyAffineTransform(newPoint, btn.transform)
+        oldPoint = CGPointApplyAffineTransform(oldPoint, btn.transform)
+        
+        var position : CGPoint = btn.layer.position
+        
+        position.x -= oldPoint.x
+        position.x += newPoint.x;
+        
+        position.y -= oldPoint.y;
+        position.y += newPoint.y;
+        
+        btn.layer.position = position;
+        btn.layer.anchorPoint = anchorPoint;
+    }
+    
+    func setAnchor(anchorPoint : CGPoint,view:UIView) {
+        var newPoint = CGPointMake(view.bounds.size.width * anchorPoint.x, view.bounds.size.height * anchorPoint.y)
+        var oldPoint = CGPointMake(view.bounds.size.width * view.layer.anchorPoint.x, view.bounds.size.height * view.layer.anchorPoint.y)
+        
+        newPoint = CGPointApplyAffineTransform(newPoint, view.transform)
+        oldPoint = CGPointApplyAffineTransform(oldPoint, view.transform)
+        
+        var position : CGPoint = view.layer.position
+        
+        position.x -= oldPoint.x
+        position.x += newPoint.x;
+        
+        position.y -= oldPoint.y;
+        position.y += newPoint.y;
+        
+        view.layer.position = position;
+        view.layer.anchorPoint = anchorPoint;
+    }
+    
     //delegate
+    
+    override func loadView() {
+        super.loadView()
+        
+    }
     //pickpicturefromfile
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
@@ -159,7 +206,18 @@ class VC_BaseVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
         self.str_picture =
             imageData.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
         //            });
+        self.img_displayPic.image = img_picture
         
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    //keyboard
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
