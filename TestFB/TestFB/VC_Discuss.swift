@@ -17,6 +17,7 @@ class VC_Discuss : VC_BaseVC,UITableViewDataSource,UITableViewDelegate{
     @IBOutlet weak var txt_discuss: UITextField!
     @IBOutlet weak var btn_addDiscuss: UIButton!
     @IBOutlet weak var btn_back: UIButton!
+    @IBOutlet weak var const_buttom: NSLayoutConstraint!
     
     @IBAction func clickAddDiscuss(sender: AnyObject) {
         
@@ -96,7 +97,21 @@ class VC_Discuss : VC_BaseVC,UITableViewDataSource,UITableViewDelegate{
         
         return cell
     }
-
+    
+    //textfield
+    func textFieldDidBeginEditing(textField: UITextField) {
+//        self.view.transform
+        print("startEdit")
+        UIView.animateWithDuration(0.5, animations: {
+            self.const_buttom.constant = 10 + self.view.bounds.height/2 - textField.bounds.height})
+    }
+    
+    override func textFieldShouldReturn(textField: UITextField) -> Bool {
+        print("endEdit")
+        UIView.animateWithDuration(0.5, animations: {
+            self.const_buttom.constant = 10})
+        return super.textFieldShouldReturn(textField)
+    }
 }
 
 class TVC_Discuss :UITableViewCell{

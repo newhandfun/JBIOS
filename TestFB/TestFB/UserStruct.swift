@@ -39,34 +39,7 @@ struct StaticUserData {
     static var storeList : [String:NSObject]?
     
     static func convertFBResultToProperty(result:AnyObject!,function:()){
-        StaticUserData.name = result["name"] as? String
-        StaticUserData.email = result["email"] as? String
-        let FBid = result["id"] as? String
-        StaticUserData.FBid = Int(FBid!)!
-        StaticUserData.gender = result["gender"]as? String
-        StaticUserData.nickname = StaticUserData.name
-        StaticUserData.isFB = true
-        var pictureUrl = ""
-        
-        if let picture = result["picture"] as? NSDictionary,data = picture["data"] as? NSDictionary, url = data["url"] as? String {
-            pictureUrl = url
-        }
-        let url = NSURL(string: pictureUrl)
-        print(url)
-        NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler:
-            { (data, response, error) -> Void in
-                if error != nil {
-                    print(error)
-                    return
-                }else{
-                    let image = UIImage(data: data!)
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        StaticUserData.photo = image!
-                    })
-                }
-                let postData = PostData()
-                postData.LoginFBInBackground(function)
-        }).resume()
+
     }
     
     static func decodeJsonToUserData(str : NSString!){

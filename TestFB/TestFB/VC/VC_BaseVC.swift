@@ -66,7 +66,7 @@ class VC_BaseVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
             guard error == nil && data != nil else {                                                          // check for fundamental networking error
                 print("error=\(error)")
                 self.CencleActivityIndicator()
-                self.showMessage("\(error)",buttonText: "確認");
+                self.showMessage("發生某些錯誤！煩請檢查一下網路狀態後再試一次！",buttonText: "確認");
                 return
             }
             
@@ -74,7 +74,7 @@ class VC_BaseVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
                 print("response = \(response)")
                 self.CencleActivityIndicator()
-                self.showMessage("statusCode should be 200, but is \(httpStatus.statusCode)",buttonText: "確認")
+                self.showMessage("發生某些錯誤！煩請檢查一下網路狀態後再試一次！",buttonText: "確認");
                 return
             }
             
@@ -213,7 +213,7 @@ class VC_BaseVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
     
     //keyboard
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
+        self.view.endEditing(true)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
