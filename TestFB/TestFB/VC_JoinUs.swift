@@ -46,4 +46,35 @@ class VC_JoinUs : VC_BaseVC{
         lastWord = text
         return true
     }
+    
+    //edit text
+    @IBOutlet weak var const_imageUp: NSLayoutConstraint!
+    @IBOutlet weak var view_anchor1: UIView!
+    func textFieldDidBeginEditing(textField: UITextField) {
+        startEdition()
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        endEdition()
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        startEdition()
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        endEdition()
+    }
+    
+    func startEdition(){
+        print("startEdit")
+        UIView.animateWithDuration(0.5, animations: {
+            self.const_imageUp.constant = -self.view_anchor1.bounds.height})
+    }
+    
+    func endEdition(){
+        print("endEdit")
+        UIView.animateWithDuration(1, animations: {
+            self.const_imageUp.constant = -50})
+    }
 }
