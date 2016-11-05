@@ -34,9 +34,11 @@ class VC_MainSence: VC_HasExtraMenu,UICollectionViewDelegate,UICollectionViewDat
     @IBOutlet weak var view_bigMenu: UIView!
     @IBOutlet weak var silder_price: UISlider!
     @IBOutlet weak var lbl_price: UILabel!
+    //none use
     @IBOutlet weak var seg_goal: UISegmentedControl!
     @IBOutlet weak var CV_goal: UICollectionView!
     var currentPrice : Int = 100
+    var currentGoal :Int = 1;
     
     @IBAction func clickMenuButton(sender: AnyObject) {
         btn_menu.hidden = true
@@ -100,6 +102,37 @@ class VC_MainSence: VC_HasExtraMenu,UICollectionViewDelegate,UICollectionViewDat
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 6
     }
+    //goal by button
+    @IBAction func clickDate(sender: AnyObject) {
+        currentGoal = 0
+        btn_goalSelection(sender)
+    }
+    
+    @IBAction func clickFull(sender: AnyObject) {
+        currentGoal = 1
+        btn_goalSelection(sender)
+    }
+    
+    @IBAction func clickMeetUp(sender: AnyObject) {
+        currentGoal = 2
+        btn_goalSelection(sender)
+    }
+    
+    @IBAction func clickDiscuss(sender: AnyObject) {
+        currentGoal = 3
+        btn_goalSelection(sender)
+    }
+    
+    @IBAction func clickAfternoonTea(sender: AnyObject) {
+        currentGoal = 4
+        btn_goalSelection(sender)
+    }
+    
+    @IBAction func clickSnack(sender: AnyObject) {
+        currentGoal = 5
+        btn_goalSelection(sender)
+    }
+    
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Goal", forIndexPath: indexPath) as! CVC_Goal
@@ -116,7 +149,7 @@ class VC_MainSence: VC_HasExtraMenu,UICollectionViewDelegate,UICollectionViewDat
     //store data
     @IBAction func click_lid(sender: AnyObject) {
         CallActivityIndicator("尋找店家中")
-        builddataTaskWithRequest(Store.buildReqest(seg_goal.selectedSegmentIndex + 1, price: Int(silder_price.value/50)), requestType: "!")
+        builddataTaskWithRequest(Store.buildReqest(currentGoal, price: Int(silder_price.value/50)), requestType: "!")
     }
     
     override func doAfterRequest(result: NSString) {

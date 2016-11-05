@@ -103,17 +103,17 @@
 		F98DDC4B1D96B8E500240578 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		F9AE0E6D1D5B5411000C8B91 /* VC_Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC_Comment.swift; sourceTree = "<group>"; };
 		F9AE0E6F1D5B6822000C8B91 /* PVC_tutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PVC_tutorial.swift; path = VC/PVC_tutorial.swift; sourceTree = "<group>"; };
-		F9FD50D91D4DECCE006A3AF3 /* TestFB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9FD50D91D4DECCE006A3AF3 /* JBLiteIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JBLiteIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9FD50DC1D4DECCE006A3AF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9FD50DE1D4DECCE006A3AF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F9FD50E11D4DECCE006A3AF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9FD50E31D4DECCE006A3AF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9FD50E61D4DECCE006A3AF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9FD50E81D4DECCE006A3AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9FD50ED1D4DECCE006A3AF3 /* TestFBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9FD50ED1D4DECCE006A3AF3 /* JBLiteIOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JBLiteIOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9FD50F11D4DECCE006A3AF3 /* TestFBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFBTests.swift; sourceTree = "<group>"; };
 		F9FD50F31D4DECCE006A3AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9FD50F81D4DECCE006A3AF3 /* TestFBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9FD50F81D4DECCE006A3AF3 /* JBLiteIOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JBLiteIOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9FD50FC1D4DECCE006A3AF3 /* TestFBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFBUITests.swift; sourceTree = "<group>"; };
 		F9FD50FE1D4DECCE006A3AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9FD510A1D4DED75006A3AF3 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -247,9 +247,9 @@
 		F9FD50DA1D4DECCE006A3AF3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F9FD50D91D4DECCE006A3AF3 /* TestFB.app */,
-				F9FD50ED1D4DECCE006A3AF3 /* TestFBTests.xctest */,
-				F9FD50F81D4DECCE006A3AF3 /* TestFBUITests.xctest */,
+				F9FD50D91D4DECCE006A3AF3 /* JBLiteIOS.app */,
+				F9FD50ED1D4DECCE006A3AF3 /* JBLiteIOS.xctest */,
+				F9FD50F81D4DECCE006A3AF3 /* JBLiteIOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -297,9 +297,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F9FD50D81D4DECCE006A3AF3 /* TestFB */ = {
+		F9FD50D81D4DECCE006A3AF3 /* JBLiteIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9FD51011D4DECCE006A3AF3 /* Build configuration list for PBXNativeTarget "TestFB" */;
+			buildConfigurationList = F9FD51011D4DECCE006A3AF3 /* Build configuration list for PBXNativeTarget "JBLiteIOS" */;
 			buildPhases = (
 				F9FD50D51D4DECCE006A3AF3 /* Sources */,
 				F9FD50D61D4DECCE006A3AF3 /* Frameworks */,
@@ -309,14 +309,14 @@
 			);
 			dependencies = (
 			);
-			name = TestFB;
+			name = JBLiteIOS;
 			productName = TestFB;
-			productReference = F9FD50D91D4DECCE006A3AF3 /* TestFB.app */;
+			productReference = F9FD50D91D4DECCE006A3AF3 /* JBLiteIOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F9FD50EC1D4DECCE006A3AF3 /* TestFBTests */ = {
+		F9FD50EC1D4DECCE006A3AF3 /* JBLiteIOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9FD51041D4DECCE006A3AF3 /* Build configuration list for PBXNativeTarget "TestFBTests" */;
+			buildConfigurationList = F9FD51041D4DECCE006A3AF3 /* Build configuration list for PBXNativeTarget "JBLiteIOSTests" */;
 			buildPhases = (
 				F9FD50E91D4DECCE006A3AF3 /* Sources */,
 				F9FD50EA1D4DECCE006A3AF3 /* Frameworks */,
@@ -327,14 +327,14 @@
 			dependencies = (
 				F9FD50EF1D4DECCE006A3AF3 /* PBXTargetDependency */,
 			);
-			name = TestFBTests;
+			name = JBLiteIOSTests;
 			productName = TestFBTests;
-			productReference = F9FD50ED1D4DECCE006A3AF3 /* TestFBTests.xctest */;
+			productReference = F9FD50ED1D4DECCE006A3AF3 /* JBLiteIOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F9FD50F71D4DECCE006A3AF3 /* TestFBUITests */ = {
+		F9FD50F71D4DECCE006A3AF3 /* JBLiteIOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9FD51071D4DECCE006A3AF3 /* Build configuration list for PBXNativeTarget "TestFBUITests" */;
+			buildConfigurationList = F9FD51071D4DECCE006A3AF3 /* Build configuration list for PBXNativeTarget "JBLiteIOSUITests" */;
 			buildPhases = (
 				F9FD50F41D4DECCE006A3AF3 /* Sources */,
 				F9FD50F51D4DECCE006A3AF3 /* Frameworks */,
@@ -345,9 +345,9 @@
 			dependencies = (
 				F9FD50FA1D4DECCE006A3AF3 /* PBXTargetDependency */,
 			);
-			name = TestFBUITests;
+			name = JBLiteIOSUITests;
 			productName = TestFBUITests;
-			productReference = F9FD50F81D4DECCE006A3AF3 /* TestFBUITests.xctest */;
+			productReference = F9FD50F81D4DECCE006A3AF3 /* JBLiteIOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -382,7 +382,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F9FD50D41D4DECCE006A3AF3 /* Build configuration list for PBXProject "TestFB" */;
+			buildConfigurationList = F9FD50D41D4DECCE006A3AF3 /* Build configuration list for PBXProject "JBLiteIOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -395,9 +395,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F9FD50D81D4DECCE006A3AF3 /* TestFB */,
-				F9FD50EC1D4DECCE006A3AF3 /* TestFBTests */,
-				F9FD50F71D4DECCE006A3AF3 /* TestFBUITests */,
+				F9FD50D81D4DECCE006A3AF3 /* JBLiteIOS */,
+				F9FD50EC1D4DECCE006A3AF3 /* JBLiteIOSTests */,
+				F9FD50F71D4DECCE006A3AF3 /* JBLiteIOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -492,12 +492,12 @@
 /* Begin PBXTargetDependency section */
 		F9FD50EF1D4DECCE006A3AF3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F9FD50D81D4DECCE006A3AF3 /* TestFB */;
+			target = F9FD50D81D4DECCE006A3AF3 /* JBLiteIOS */;
 			targetProxy = F9FD50EE1D4DECCE006A3AF3 /* PBXContainerItemProxy */;
 		};
 		F9FD50FA1D4DECCE006A3AF3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F9FD50D81D4DECCE006A3AF3 /* TestFB */;
+			target = F9FD50D81D4DECCE006A3AF3 /* JBLiteIOS */;
 			targetProxy = F9FD50F91D4DECCE006A3AF3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -622,7 +622,7 @@
 				INFOPLIST_FILE = TestFB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivan.jblite;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = JBLiteIOS;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestFB/TestFB-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -644,7 +644,7 @@
 				INFOPLIST_FILE = TestFB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivan.jblite;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = JBLiteIOS;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestFB/TestFB-Bridging-Header.h";
 			};
@@ -657,8 +657,8 @@
 				INFOPLIST_FILE = TestFBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TestFBTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestFB.app/TestFB";
+				PRODUCT_NAME = JBLiteIOS;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JBLiteIOS.app/JBLiteIOS";
 			};
 			name = Debug;
 		};
@@ -669,8 +669,8 @@
 				INFOPLIST_FILE = TestFBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TestFBTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestFB.app/TestFB";
+				PRODUCT_NAME = JBLiteIOS;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JBLiteIOS.app/JBLiteIOS";
 			};
 			name = Release;
 		};
@@ -680,7 +680,7 @@
 				INFOPLIST_FILE = TestFBUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TestFBUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = JBLiteIOS;
 				TEST_TARGET_NAME = TestFB;
 			};
 			name = Debug;
@@ -691,7 +691,7 @@
 				INFOPLIST_FILE = TestFBUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TestFBUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = JBLiteIOS;
 				TEST_TARGET_NAME = TestFB;
 			};
 			name = Release;
@@ -699,7 +699,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F9FD50D41D4DECCE006A3AF3 /* Build configuration list for PBXProject "TestFB" */ = {
+		F9FD50D41D4DECCE006A3AF3 /* Build configuration list for PBXProject "JBLiteIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9FD50FF1D4DECCE006A3AF3 /* Debug */,
@@ -708,7 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9FD51011D4DECCE006A3AF3 /* Build configuration list for PBXNativeTarget "TestFB" */ = {
+		F9FD51011D4DECCE006A3AF3 /* Build configuration list for PBXNativeTarget "JBLiteIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9FD51021D4DECCE006A3AF3 /* Debug */,
@@ -717,7 +717,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9FD51041D4DECCE006A3AF3 /* Build configuration list for PBXNativeTarget "TestFBTests" */ = {
+		F9FD51041D4DECCE006A3AF3 /* Build configuration list for PBXNativeTarget "JBLiteIOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9FD51051D4DECCE006A3AF3 /* Debug */,
@@ -726,7 +726,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9FD51071D4DECCE006A3AF3 /* Build configuration list for PBXNativeTarget "TestFBUITests" */ = {
+		F9FD51071D4DECCE006A3AF3 /* Build configuration list for PBXNativeTarget "JBLiteIOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9FD51081D4DECCE006A3AF3 /* Debug */,

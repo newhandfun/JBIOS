@@ -28,8 +28,7 @@ class VC_Result: VC_HasExtraMenu {
     override func viewDidLoad() {
         super.viewDidLoad()
         txt_name.text = Store.name
-        loadImage()
-//        imageTimer = NSTimer.scheduledTimerWithTimeInterval(0.3, target : self, selector: Selector("loadImage"),userInfo: nil, repeats: true)
+        imageTimer = NSTimer.scheduledTimerWithTimeInterval(0.3, target : self, selector: Selector("loadImage"),userInfo: nil, repeats: true)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -106,7 +105,7 @@ class VC_Result: VC_HasExtraMenu {
     
     func goToDiscuss(sender :AnyObject){
         
-        self.CallActivityIndicator("取得評論中～")
+        self.CallActivityIndicator("取得評論～(連點看看？)")
         self.builddataTaskWithRequest(Store.buildCommentReqest(), requestType: "")
     }
     

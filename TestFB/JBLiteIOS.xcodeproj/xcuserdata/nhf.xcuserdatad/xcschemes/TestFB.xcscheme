@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F9FD50D81D4DECCE006A3AF3"
-               BuildableName = "TestFB.app"
-               BlueprintName = "TestFB"
-               ReferencedContainer = "container:TestFB.xcodeproj">
+               BuildableName = "JBLiteIOS.app"
+               BlueprintName = "JBLiteIOS"
+               ReferencedContainer = "container:JBLiteIOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F9FD50EC1D4DECCE006A3AF3"
-               BuildableName = "TestFBTests.xctest"
-               BlueprintName = "TestFBTests"
-               ReferencedContainer = "container:TestFB.xcodeproj">
+               BuildableName = "JBLiteIOS.xctest"
+               BlueprintName = "JBLiteIOSTests"
+               ReferencedContainer = "container:JBLiteIOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F9FD50F71D4DECCE006A3AF3"
-               BuildableName = "TestFBUITests.xctest"
-               BlueprintName = "TestFBUITests"
-               ReferencedContainer = "container:TestFB.xcodeproj">
+               BuildableName = "JBLiteIOS.xctest"
+               BlueprintName = "JBLiteIOSUITests"
+               ReferencedContainer = "container:JBLiteIOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F9FD50D81D4DECCE006A3AF3"
-            BuildableName = "TestFB.app"
-            BlueprintName = "TestFB"
-            ReferencedContainer = "container:TestFB.xcodeproj">
+            BuildableName = "JBLiteIOS.app"
+            BlueprintName = "JBLiteIOS"
+            ReferencedContainer = "container:JBLiteIOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F9FD50D81D4DECCE006A3AF3"
-            BuildableName = "TestFB.app"
-            BlueprintName = "TestFB"
-            ReferencedContainer = "container:TestFB.xcodeproj">
+            BuildableName = "JBLiteIOS.app"
+            BlueprintName = "JBLiteIOS"
+            ReferencedContainer = "container:JBLiteIOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F9FD50D81D4DECCE006A3AF3"
-            BuildableName = "TestFB.app"
-            BlueprintName = "TestFB"
-            ReferencedContainer = "container:TestFB.xcodeproj">
+            BuildableName = "JBLiteIOS.app"
+            BlueprintName = "JBLiteIOS"
+            ReferencedContainer = "container:JBLiteIOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

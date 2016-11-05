@@ -10,6 +10,7 @@ import UIKit
 
 class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
     
+    var isLogin : Bool  = false
     @IBOutlet weak var btn_FBLogin: UIButton!
     var loginTimer = NSTimer()
     
@@ -23,14 +24,11 @@ class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
         if FBSDKAccessToken.currentAccessToken() != nil{
             CallActivityIndicator("臉書登入中～請稍候");
             getFBUserData()
-//            loginTimer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: Selector("goToMainSence"),userInfo: nil, repeats: true)
+            loginTimer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: Selector("goToMainSence"),userInfo: nil, repeats: true)
         }
     }
     
     //登入
-    let postData = PostData()
-    var isLogin : Bool  = false
-
     //UI
     @IBOutlet weak var text_emil: UITextField!
     @IBOutlet weak var text_password: UITextField!
@@ -63,52 +61,10 @@ class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
         if((FBSDKAccessToken.currentAccessToken()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: StaticUserData.parameters).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
-                    StaticUserData.name = result["name"] as? String
-                    StaticUserData.email = result["email"] as? String
-                    let FBid = result["id"] as? String
-                    StaticUserData.FBid = Int(FBid!)!
-                    StaticUserData.gender = result["gender"]as? String
-                    StaticUserData.nickname = StaticUserData.name
-                    StaticUserData.isFB = true
-                    
-                    //picture
-                    var pictureUrl = ""
-                    
-                    if let picture = result["picture"] as? NSDictionary,data = picture["data"] as? NSDictionary, url = data["url"] as? String {
-                        pictureUrl = url
-                    }
-                    let url = NSURL(string: pictureUrl)
-                    print(url)
-                    NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler:
-                        { (data, response, error) -> Void in
-                            if error != nil {
-                                print(error)
-                                return
-                            }else{
-                                let image = UIImage(data: data!)
-                                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                    StaticUserData.photo = image!
-                                })
-                            }
-                    }).resume()
-                    //player data
-                    self.builddataTaskWithRequest(self.postData.haveFBaccount(), requestType: "!")
+                    StaticUserData.convertFBResultToProperty(result,function : self.goToMainSence())
+                    print("login")
                 }
             })
-        }
-    }
-    
-    override func doAfterRequest(result: NSString) {
-        StaticUserData.decodeJsonToUserData(result)
-        if StaticUserData.userID != nil{
-            CencleActivityIndicator()
-            self.goToMainSence()
-        }
-        if result == "{\"success\":\"False\"}"{
-            builddataTaskWithRequest(self.postData.addFBUser(),requestType: "add")
-        }else if isLogin != true{
-            isLogin = true
-            builddataTaskWithRequest(self.postData.loadUser(), requestType: "load")
         }
     }
     
@@ -124,7 +80,7 @@ class VC_Login: VC_BaseVC,FBSDKLoginButtonDelegate{
         CencleActivityIndicator()
         if(StaticUserData.userID != nil){
             performSegueWithIdentifier("Main", sender: self)
-//            loginTimer.invalidate()
+            loginTimer.invalidate()
         }else{
             showMessage("請檢查網路狀態～", buttonText: "我知道了")
         }

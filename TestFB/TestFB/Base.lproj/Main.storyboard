@@ -11,7 +11,7 @@
         <!--VC_Extra-->
         <scene sceneID="E7s-WT-zQs">
             <objects>
-                <viewController storyboardIdentifier="VC_Extra" id="e3S-iI-SRD" userLabel="VC_Extra" customClass="VC_ExtraOption" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VC_Extra" id="e3S-iI-SRD" userLabel="VC_Extra" customClass="VC_ExtraOption" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2zg-eN-pbT"/>
                         <viewControllerLayoutGuide type="bottom" id="gOh-PX-z5S"/>
@@ -20,11 +20,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYG-Ge-Xfv" userLabel="panalV">
-                                <rect key="frame" x="20" y="10" width="150" height="591"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYG-Ge-Xfv" userLabel="panalV">
+                                <rect key="frame" x="20" y="30" width="150" height="571"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="panel" translatesAutoresizingMaskIntoConstraints="NO" id="PLW-HN-hUW">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="591"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="panel" translatesAutoresizingMaskIntoConstraints="NO" id="PLW-HN-hUW">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="571"/>
                                         <variation key="heightClass=compact" misplaced="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="118" height="360"/>
                                         </variation>
@@ -109,7 +109,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRg-0I-Cnt" userLabel="btn_aboutus">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRg-0I-Cnt" userLabel="btn_aboutus">
                                                 <rect key="frame" x="26" y="404" width="58" height="49"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="yRg-0I-Cnt" secondAttribute="height" multiplier="1.2" id="LCi-4M-jSv"/>
@@ -169,8 +169,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="stick" translatesAutoresizingMaskIntoConstraints="NO" id="0q1-tm-j4g">
-                                <rect key="frame" x="-20" y="10" width="378" height="15"/>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stick" translatesAutoresizingMaskIntoConstraints="NO" id="0q1-tm-j4g">
+                                <rect key="frame" x="-20" y="30" width="540" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="jdR-P8-sVq"/>
                                 </constraints>
@@ -178,17 +178,17 @@
                                     <rect key="frame" x="0.0" y="19" width="299" height="32"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="brown_panel" translatesAutoresizingMaskIntoConstraints="NO" id="iHX-LK-9o3" userLabel="img_bellTag">
-                                <rect key="frame" x="320" y="48" width="100" height="36"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brown_panel" translatesAutoresizingMaskIntoConstraints="NO" id="iHX-LK-9o3" userLabel="img_bellTag">
+                                <rect key="frame" x="455" y="68" width="145" height="51"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="服務鈴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGd-Re-cSS" userLabel="lbl_bellTag">
-                                <rect key="frame" x="355" y="56" width="51" height="21"/>
+                                <rect key="frame" x="513" y="84" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.98472602750000005" green="0.98603184269999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wo-8l-DbV" userLabel="btn_Bell">
-                                <rect key="frame" x="300" y="18" width="63" height="90"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wo-8l-DbV" userLabel="btn_Bell">
+                                <rect key="frame" x="435" y="38" width="90" height="129"/>
                                 <state key="normal" image="bell"/>
                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="153" y="40" width="77" height="93"/>
@@ -236,7 +236,7 @@
         <!--Result-->
         <scene sceneID="knh-fK-E1z">
             <objects>
-                <viewController storyboardIdentifier="Result" title="Result" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w0J-gg-a5W" userLabel="Result" customClass="VC_Result" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Result" title="Result" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w0J-gg-a5W" userLabel="Result" customClass="VC_Result" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HqP-XF-nR7"/>
                         <viewControllerLayoutGuide type="bottom" id="rre-cs-sdd"/>
@@ -521,7 +521,7 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Login" title="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="VC_Login" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" title="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="VC_Login" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZIV-xR-Cwk"/>
                         <viewControllerLayoutGuide type="bottom" id="eSQ-AL-dUB"/>
@@ -670,7 +670,7 @@
         <!--tutorial-->
         <scene sceneID="X7g-xR-U6O">
             <objects>
-                <pageViewController storyboardIdentifier="PVC_tutorial" autoresizesArchivedViewToFullSize="NO" title="tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="hrz-q4-TWA" userLabel="tutorial" customClass="PVC_tutorial" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PVC_tutorial" autoresizesArchivedViewToFullSize="NO" title="tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="hrz-q4-TWA" userLabel="tutorial" customClass="PVC_tutorial" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <keyCommands>
                         <keyCommand/>
                     </keyCommands>
@@ -682,7 +682,7 @@
         <!--Main-->
         <scene sceneID="Hcl-t6-0Q2">
             <objects>
-                <viewController storyboardIdentifier="Main" title="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gNb-bO-xUU" customClass="VC_MainSence" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" title="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gNb-bO-xUU" customClass="VC_MainSence" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EMz-fB-e9b"/>
                         <viewControllerLayoutGuide type="bottom" id="AvA-Mq-5KZ"/>
@@ -715,7 +715,7 @@
                                     <constraint firstAttribute="width" secondItem="1sK-XA-bBZ" secondAttribute="height" id="tQF-nY-1mI"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXo-qU-iQU" userLabel="view_onTabel" customClass="V_Cooker" customModule="TestFB" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXo-qU-iQU" userLabel="view_onTabel" customClass="V_Cooker" customModule="JBLiteIOS" customModuleProvider="target">
                                 <rect key="frame" x="30" y="20" width="540" height="225"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plate" translatesAutoresizingMaskIntoConstraints="NO" id="bES-ik-Pbv">
@@ -895,7 +895,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Goal" id="DoZ-zP-cM6" customClass="CVC_Goal" customModule="TestFB" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Goal" id="DoZ-zP-cM6" customClass="CVC_Goal" customModule="JBLiteIOS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1191,7 +1191,7 @@
         <!--Comment-->
         <scene sceneID="Qo0-dm-ki2">
             <objects>
-                <viewController title="Comment" id="Q76-pF-pNI" customClass="VC_Comment" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Comment" id="Q76-pF-pNI" customClass="VC_Comment" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vzr-Iv-HAb"/>
                         <viewControllerLayoutGuide type="bottom" id="OUq-ag-zq5"/>
@@ -1425,7 +1425,7 @@
         <!--Map-->
         <scene sceneID="Dyt-sp-OUq">
             <objects>
-                <viewController storyboardIdentifier="Map" title="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b4h-2e-p8t" userLabel="Map" customClass="VC_Map" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Map" title="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b4h-2e-p8t" userLabel="Map" customClass="VC_Map" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kJl-p3-oI3"/>
                         <viewControllerLayoutGuide type="bottom" id="2hL-EN-e25"/>
@@ -1470,7 +1470,7 @@
         <!--imformation-->
         <scene sceneID="JWr-Q0-5vz">
             <objects>
-                <viewController title="imformation" id="Trq-H3-U9I" customClass="VC_Profile" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="imformation" id="Trq-H3-U9I" customClass="VC_Profile" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RhQ-Nq-S9P"/>
                         <viewControllerLayoutGuide type="bottom" id="zTK-FL-NoS"/>
@@ -1788,7 +1788,7 @@
         <!--tuto_4-->
         <scene sceneID="Rwe-N6-8WS">
             <objects>
-                <viewController storyboardIdentifier="tuto_4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v9s-bz-C9l" userLabel="tuto_4" customClass="VC_tutorialPage" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tuto_4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v9s-bz-C9l" userLabel="tuto_4" customClass="VC_tutorialPage" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Et-6O-tON"/>
                         <viewControllerLayoutGuide type="bottom" id="MCU-qA-IUI"/>
@@ -1875,7 +1875,7 @@
         <!--StoreList-->
         <scene sceneID="8F1-dh-0CV">
             <objects>
-                <viewController storyboardIdentifier="StoreList" title="StoreList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="758-so-CLU" userLabel="StoreList" customClass="VC_StoreList" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoreList" title="StoreList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="758-so-CLU" userLabel="StoreList" customClass="VC_StoreList" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q5L-Zm-edf"/>
                         <viewControllerLayoutGuide type="bottom" id="bOo-SO-RAD"/>
@@ -1902,7 +1902,7 @@
                                         <rect key="frame" x="20" y="80" width="260" height="432"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StoreCell" textLabel="YLk-C7-FWw" detailTextLabel="bQG-Ja-W37" style="IBUITableViewCellStyleValue1" id="dd7-hV-0HA" customClass="TVC_Store" customModule="TestFB" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StoreCell" textLabel="YLk-C7-FWw" detailTextLabel="bQG-Ja-W37" style="IBUITableViewCellStyleValue1" id="dd7-hV-0HA" customClass="TVC_Store" customModule="JBLiteIOS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="260" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dd7-hV-0HA" id="hgG-Eg-tNs">
@@ -1994,7 +1994,7 @@
         <!--Offer-->
         <scene sceneID="2RL-2h-Gl1">
             <objects>
-                <viewController title="Offer" id="IYJ-rG-Df7" customClass="VC_OfferStore" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Offer" id="IYJ-rG-Df7" customClass="VC_OfferStore" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Fh-T4-d0m"/>
                         <viewControllerLayoutGuide type="bottom" id="2WK-lS-iso"/>
@@ -2028,7 +2028,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mNc-9r-YBm" userLabel="stack_menu">
                                 <rect key="frame" x="105" y="550" width="300" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OW-59-LVu">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OW-59-LVu">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="確認">
@@ -2038,7 +2038,7 @@
                                             <action selector="clickConfirm:" destination="IYJ-rG-Df7" eventType="touchUpInside" id="gd1-4m-Cwl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHt-k0-W9z">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHt-k0-W9z">
                                         <rect key="frame" x="150" y="0.0" width="150" height="30"/>
                                         <color key="backgroundColor" red="0.74415095899999995" green="0.74415095899999995" blue="0.74415095899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="返回">
@@ -2053,21 +2053,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" alignment="center" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wnV-VZ-WYd" userLabel="stack_data">
                                 <rect key="frame" x="84" y="370" width="360" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adh-lb-DCq" userLabel="btn_address">
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adh-lb-DCq" userLabel="btn_address">
                                         <rect key="frame" x="0.0" y="1" width="113" height="118"/>
                                         <state key="normal" title="Button" image="address"/>
                                         <connections>
                                             <action selector="clickAddress:" destination="IYJ-rG-Df7" eventType="touchUpInside" id="vHL-F6-2bX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fy-21-KXC" userLabel="btn_time">
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fy-21-KXC" userLabel="btn_time">
                                         <rect key="frame" x="123" y="0.0" width="114" height="120"/>
                                         <state key="normal" image="time"/>
                                         <connections>
                                             <action selector="clickTime:" destination="IYJ-rG-Df7" eventType="touchUpInside" id="MiZ-Li-tPz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go9-jz-cns" userLabel="btn_phone">
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go9-jz-cns" userLabel="btn_phone">
                                         <rect key="frame" x="247" y="0.0" width="113" height="120"/>
                                         <state key="normal" title="Button" image="phone"/>
                                         <connections>
@@ -2246,19 +2246,19 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fMw-cj-7gH">
                                 <rect key="frame" x="84" y="454" width="360" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="地址" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxb-Qt-8cT">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxb-Qt-8cT">
                                         <rect key="frame" x="0.0" y="0.0" width="113" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.98472602750000005" green="0.98603184269999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="時間" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NB-O9-O5x">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時間" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NB-O9-O5x">
                                         <rect key="frame" x="123" y="0.0" width="114" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.98472602750000005" green="0.98603184269999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="電話" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d66-ze-yxt">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電話" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d66-ze-yxt">
                                         <rect key="frame" x="247" y="0.0" width="113" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.98472602750000005" green="0.98603184269999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2324,7 +2324,7 @@
         <!--JoinUs-->
         <scene sceneID="zzG-rz-qc3">
             <objects>
-                <viewController storyboardIdentifier="JoinUs" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5vh-qa-d8u" userLabel="JoinUs" customClass="VC_JoinUs" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JoinUs" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5vh-qa-d8u" userLabel="JoinUs" customClass="VC_JoinUs" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tUo-PH-bdk"/>
                         <viewControllerLayoutGuide type="bottom" id="3sB-gr-UA5"/>
@@ -2498,7 +2498,7 @@
         <!--Test-->
         <scene sceneID="ZdM-8f-jRW">
             <objects>
-                <viewController storyboardIdentifier="Test" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E9O-wi-kK9" userLabel="Test" customClass="VC_BaseVC" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Test" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E9O-wi-kK9" userLabel="Test" customClass="VC_BaseVC" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ak5-Nl-nJx"/>
                         <viewControllerLayoutGuide type="bottom" id="IqY-WF-pcb"/>
@@ -2566,7 +2566,7 @@
         <!--Discuss-->
         <scene sceneID="U74-x5-6Uw">
             <objects>
-                <viewController id="9lz-zK-OQU" userLabel="Discuss" customClass="VC_Discuss" customModule="TestFB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9lz-zK-OQU" userLabel="Discuss" customClass="VC_Discuss" customModule="JBLiteIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fkF-p4-0J1"/>
                         <viewControllerLayoutGuide type="bottom" id="UtV-gO-JTF"/>
@@ -2617,7 +2617,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="500" height="305"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="200" id="Z4R-ee-zou" customClass="TVC_Discuss" customModule="TestFB" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="200" id="Z4R-ee-zou" customClass="TVC_Discuss" customModule="JBLiteIOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="500" height="200"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z4R-ee-zou" id="Q1M-sI-NSj">
@@ -2773,7 +2773,7 @@
                     <connections>
                         <outlet property="btn_addDiscuss" destination="AcK-aM-qCs" id="Jfq-5a-7Nn"/>
                         <outlet property="btn_back" destination="IrI-fM-em9" id="HqZ-im-gbM"/>
-                        <outlet property="const_buttom" destination="Kxl-hj-NBi" id="HJA-RM-u4u"/>
+                        <outlet property="const_buttom" destination="Kxl-hj-NBi" id="PZT-nd-gUG"/>
                         <outlet property="lbl_numberOfContent" destination="DV3-AU-l7A" id="7yF-78-KQr"/>
                         <outlet property="lbl_storeName" destination="ccp-kY-eqi" id="5AW-Pn-VCv"/>
                         <outlet property="tableV_content" destination="iSZ-dH-7eg" id="ty2-BW-zMV"/>
